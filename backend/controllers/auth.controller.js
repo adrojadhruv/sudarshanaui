@@ -272,7 +272,7 @@ exports.googleCallback = async (req, res) => {
       httpOnly: true,
     });
 
-    res.redirect(`${CLIENT_URL}/dashboard`);
+    res.redirect(`${CLIENT_URL}/components`);
 
   } catch (err) {
     console.error("Google Auth Error:", err.response?.data || err.message);
@@ -352,7 +352,7 @@ exports.githubCallback = async (req, res) => {
       httpOnly: true,
     });
 
-    res.redirect(`${CLIENT_URL}/dashboard`);
+    res.redirect(`${CLIENT_URL}/components`);
 
   } catch (err) {
     console.error("GitHub Auth Error:", err.response?.data || err.message);
