@@ -7,7 +7,10 @@
         },
         {
             "src": "frontend/package.json",
-            "use": "@vercel/static"
+            "use": "@vercel/static",
+            "config": {
+                "distDir": "dist"
+            }
         }
     ],
     "rewrites": [
@@ -16,8 +19,12 @@
             "destination": "/backend/server.js"
         },
         {
+            "source": "/(.*)\\.(.*)",
+            "destination": "/frontend/$1.$2"
+        },
+        {
             "source": "/(.*)",
-            "destination": "/frontend/$1"
+            "destination": "/frontend/index.html"
         }
     ]
 }
