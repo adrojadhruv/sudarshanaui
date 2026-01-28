@@ -208,9 +208,12 @@ exports.updateProfile = async (req, res) => {
 // --- GOOGLE OAUTH ---
 exports.googleAuth = (req, res) => {
   const redirectUri = "https://accounts.google.com/o/oauth2/v2/auth";
+  const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+  const SERVER_URL = process.env.SERVER_URL || "http://localhost:3000";
+
   const params = new URLSearchParams({
     client_id: process.env.GOOGLE_CLIENT_ID,
-    redirect_uri: "http://localhost:3000/api/v1/auth/google/callback",
+    redirect_uri: `${SERVER_URL}/api/v1/auth/google/callback`,
     response_type: "code",
     scope: "profile email",
     access_type: "offline",
@@ -222,6 +225,9 @@ exports.googleAuth = (req, res) => {
 exports.googleCallback = async (req, res) => {
   try {
     const { code } = req.query;
+    const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+    const SERVER_URL = process.env.SERVER_URL || "http://localhost:3000";
+
     if (!code) return res.status(400).json({ message: "Authorization code missing" });
 
     // 1. Exchange code for tokens
@@ -230,7 +236,7 @@ exports.googleCallback = async (req, res) => {
       client_secret: process.env.GOOGLE_CLIENT_SECRET,
       code,
       grant_type: "authorization_code",
-      redirect_uri: "http://localhost:3000/api/v1/auth/google/callback"
+      redirect_uri: `${SERVER_URL}/api/v1/auth/google/callback`
     });
 
     // 2. Get User Info
@@ -266,20 +272,23 @@ exports.googleCallback = async (req, res) => {
       httpOnly: true,
     });
 
-    res.redirect("http://localhost:5173/dashboard");
+    res.redirect(`${CLIENT_URL}/dashboard`);
 
   } catch (err) {
     console.error("Google Auth Error:", err.response?.data || err.message);
-    res.redirect("http://localhost:5173/login?error=GoogleAuthFailed");
+    const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+    res.redirect(`${CLIENT_URL}/login?error=GoogleAuthFailed`);
   }
 };
 
 // --- GITHUB OAUTH ---
 exports.githubAuth = (req, res) => {
   const redirectUri = "https://github.com/login/oauth/authorize";
+  const SERVER_URL = process.env.SERVER_URL || "http://localhost:3000";
+
   const params = new URLSearchParams({
     client_id: process.env.GITHUB_CLIENT_ID,
-    redirect_uri: "http://localhost:3000/api/v1/auth/github/callback",
+    redirect_uri: `${SERVER_URL}/api/v1/auth/github/callback`,
     scope: "user:email",
   });
   res.redirect(`${redirectUri}?${params.toString()}`);
@@ -288,6 +297,8 @@ exports.githubAuth = (req, res) => {
 exports.githubCallback = async (req, res) => {
   try {
     const { code } = req.query;
+    const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+
     if (!code) return res.status(400).json({ message: "Authorization code missing" });
 
     // 1. Exchange code for tokens
@@ -341,10 +352,11 @@ exports.githubCallback = async (req, res) => {
       httpOnly: true,
     });
 
-    res.redirect("http://localhost:5173/dashboard");
+    res.redirect(`${CLIENT_URL}/dashboard`);
 
   } catch (err) {
     console.error("GitHub Auth Error:", err.response?.data || err.message);
-    res.redirect("http://localhost:5173/login?error=GithubAuthFailed");
+    const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+    res.redirect(`${CLIENT_URL}/login?error=GithubAuthFailed`);
   }
 };
