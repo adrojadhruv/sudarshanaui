@@ -83,7 +83,9 @@ exports.login = async (req, res) => {
 
       res.cookie("token", token, {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-        httpOnly: true
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
       }).status(200).json({
         success: true,
         token,
@@ -112,7 +114,12 @@ exports.logout = async (req, res) => {
   try {
     return res
       .status(200)
-      .cookie("token", "", { expires: new Date(Date.now()) })
+      .cookie("token", "", {
+        expires: new Date(Date.now()),
+        httpOnly: true,
+        sameSite: "none",
+        secure: true
+      })
       .json({
         success: true,
         message: "User logged out successfully"
@@ -270,6 +277,8 @@ exports.googleCallback = async (req, res) => {
     res.cookie("token", token, {
       expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
       httpOnly: true,
+      sameSite: "none",
+      secure: true,
     });
 
     res.redirect(`${CLIENT_URL}/components`);
@@ -350,6 +359,8 @@ exports.githubCallback = async (req, res) => {
     res.cookie("token", token, {
       expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
       httpOnly: true,
+      sameSite: "none",
+      secure: true,
     });
 
     res.redirect(`${CLIENT_URL}/components`);
