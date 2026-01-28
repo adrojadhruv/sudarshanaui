@@ -58,7 +58,9 @@ export default function Signup() {
     };
 
     const handleOAuth = (provider) => {
-        window.location.href = `http://localhost:3000/api/v1/auth/${provider}`;
+        const baseURL = api.defaults.baseURL || "http://localhost:3000/api/v1";
+        const cleanBaseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+        window.location.href = `${cleanBaseURL}/auth/${provider}`;
     };
 
     // BUSINESS COMPACT STYLES

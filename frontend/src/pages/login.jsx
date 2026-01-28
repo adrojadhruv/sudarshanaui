@@ -56,7 +56,17 @@ export default function Login({ onLogin }) {
   };
 
   const handleOAuth = (provider) => {
-    window.location.href = `http://localhost:3000/api/v1/auth/${provider}`;
+    const baseURL = api.defaults.baseURL || "http://localhost:3000/api/v1";
+    // If baseURL is relative (starts with /), construct full URL using window.origin (for same-domain deployment)
+    // BUT since backend is separate (Vercel), we expect VITE_API_URL to be absolute.
+    // However, api.defaults.baseURL might include /api/v1, so we should be careful.
+
+    // Safer approach: Use the env var directly or reconstruct based on known structure.
+    // Let's rely on the axios baseURL which should be correct.
+
+    // Remove trailing slash if present to avoid double slashes
+    const cleanBaseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+    window.location.href = `${cleanBaseURL}/auth/${provider}`;
   };
 
   // BUSINESS COMPACT STYLES
