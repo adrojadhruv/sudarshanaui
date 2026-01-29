@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
+import MonacoEditor from "@monaco-editor/react";
+import { useTheme } from "../context/ThemeContext";
 import PreviewFrame from "../components/PreviewFrame";
 import api from "../services/api";
 import JSZip from "jszip";
@@ -13,6 +15,10 @@ export default function Editor({ user }) {
   const isCollabMode = queryParams.get("mode") === "collab";
   const isReviewMode = queryParams.get("mode") === "review";
   const requestId = queryParams.get("requestId");
+
+  const { mode } = useTheme();
+  // Map our 'mode' (light/dark) to Monaco's theme names ('vs', 'vs-dark')
+  const editorTheme = mode === 'dark' ? 'vs-dark' : 'light';
 
   // --- STATE ---
   const [component, setComponent] = useState(null);
@@ -579,23 +585,22 @@ export default function ${component.name.replace(/[^a-zA-Z0-9]/g, '')}(props) {
           )}
 
           <div style={{ position: "relative", flex: 1, display: "flex", flexDirection: "column", border: "1px solid #ccc", borderRadius: "8px", overflow: "hidden" }}>
-            <textarea
-              style={{
-                flex: 1,
-                width: "100%",
-                fontFamily: "'Fira Code', monospace",
-                fontSize: "14px",
-                backgroundColor: isReadOnly ? "#fafafa" : "#fff",
-                color: "#2d3748",
-                border: "none",
-                padding: "15px",
-                resize: "none",
-                outline: "none"
-              }}
+            <MonacoEditor
+              height="100%"
+              language={isCodeMode ? "javascript" : "json"}
+              theme={editorTheme}
               value={definition}
-              onChange={e => !isReadOnly && setDefinition(e.target.value)}
-              disabled={isReadOnly}
-              spellCheck="false"
+              onChange={(value) => !isReadOnly && setDefinition(value)}
+              options={{
+                readOnly: isReadOnly,
+                minimap: { enabled: false }, // Cleaner look for smaller areas
+                scrollBeyondLastLine: false,
+                fontSize: 14,
+                fontFamily: "'Fira Code', monospace",
+                wordWrap: "on",
+                formatOnPaste: true,
+                formatOnType: true,
+              }}
             />
             {jsonError && (
               <div style={{ color: "white", background: "#e53e3e", padding: "8px 12px", fontSize: "0.85em", fontWeight: "bool" }}>
