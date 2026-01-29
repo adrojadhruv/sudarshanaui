@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sudarshanaui.vercel.app/sitemap.xml

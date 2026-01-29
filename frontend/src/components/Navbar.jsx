@@ -110,7 +110,7 @@ export default function Navbar({ user, setUser }) {
             {/* BRANDING */}
             <Link to={user ? "/components" : "/"} style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
                 <img src="/golden_circle.png" alt="Sudarshana" style={{ height: "36px", width: "36px", objectFit: "contain" }} />
-                <h1 style={{ margin: 0, fontSize: "20px", fontWeight: "800", letterSpacing: "0.5px", fontFamily: "'Inter', sans-serif" }}>
+                <div style={{ margin: 0, fontSize: "20px", fontWeight: "800", letterSpacing: "0.5px", fontFamily: "'Inter', sans-serif" }}>
                     <span style={{
                         background: "linear-gradient(to right, #FFD200, #F7971E)",
                         WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
@@ -121,7 +121,7 @@ export default function Navbar({ user, setUser }) {
                         WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
                         marginLeft: "6px", textTransform: "uppercase"
                     }}>UI</span>
-                </h1>
+                </div>
             </Link>
 
             {/* DESKTOP MENU (>768px via CSS usually, but here inline styles/JS media query often needed in pure JS solutions.
