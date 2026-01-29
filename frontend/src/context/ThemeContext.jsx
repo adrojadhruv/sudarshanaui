@@ -14,13 +14,9 @@ export const ThemeProvider = ({ children }) => {
     useEffect(() => {
         if (darkMode) {
             document.documentElement.classList.add('dark');
-            document.body.style.backgroundColor = '#0f0f11'; // Deep Premium Black
-            document.body.style.color = '#fdf7f7fd';
             localStorage.setItem('theme', 'dark');
         } else {
             document.documentElement.classList.remove('dark');
-            document.body.style.backgroundColor = '#ffffffdd';
-            document.body.style.color = '#111827';
             localStorage.setItem('theme', 'light');
         }
     }, [darkMode]);
