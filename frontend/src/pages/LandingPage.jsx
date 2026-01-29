@@ -276,9 +276,7 @@ export default function LandingPage() {
                     <div className="hero-bg-img" style={{
                         position: "absolute", inset: "0",
                         backgroundImage: `url(${isDark ? '/darklanding.png' : '/lightlanding.png'})`,
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center bottom",
+                        // backgroundSize moved to CSS for responsiveness
                         filter: isDark ? "brightness(0.9)" : "brightness(1)",
                         opacity: 1
                     }} />

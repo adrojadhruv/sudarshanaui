@@ -105,10 +105,10 @@ export default function Footer({ user }) {
     };
 
     return (
-        <footer style={footerStyle}>
+        <footer className="main-footer">
 
             {/* Left: Full Branding (Like Navbar) */}
-            <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+            <div className="footer-brand">
                 <img src="/golden_circle.png" alt="Sudarshana" style={{ height: "32px", width: "32px", objectFit: "contain" }} />
                 <h1 style={{ margin: 0, fontSize: "1.1rem", fontWeight: "800", letterSpacing: "0.2px" }}>
                     <span style={{
@@ -125,35 +125,35 @@ export default function Footer({ user }) {
             </div>
 
             {/* Center: Links (Informal, Lowercase) */}
-            <div style={{ display: "flex", gap: "40px" }}>
+            <div className="footer-links">
                 {getLinks().map((link, i) => (
-                    <LinkItem key={i} label={link.label} path={link.path} />
+                    <Link key={i} to={link.path} className="footer-link">
+                        {link.label}
+                    </Link>
                 ))}
             </div>
 
             {/* Right: Connect (With LinkedIn) */}
-            <div style={{ display: "flex", gap: "24px", position: "relative", zIndex: 10 }}>
-                <SocialIcon path={icons.github} url="https://github.com/adrojadhruv" />
-                <SocialIcon path={icons.twitter} url="https://x.com/AdrojaDhruv" />
-                <SocialIcon path={icons.linkedin} url="https://www.linkedin.com/in/gecr-comp240203107001" />
-                <SocialIcon path={icons.instagram} url="https://www.instagram.com/dhruv_19y" />
+            <div className="footer-social">
+                <a href="https://github.com/adrojadhruv" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">{icons.github}</svg>
+                </a>
+                <a href="https://x.com/AdrojaDhruv" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">{icons.twitter}</svg>
+                </a>
+                <a href="https://www.linkedin.com/in/gecr-comp240203107001" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">{icons.linkedin}</svg>
+                </a>
+                <a href="https://www.instagram.com/dhruv_19y" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">{icons.instagram}</svg>
+                </a>
             </div>
 
             {/* Large Decorative Footer Graphic */}
             <img
                 src={isDark ? "/footerimgdark.png" : "/footerimglight.png"}
                 alt="Footer Graphic"
-                style={{
-                    position: "absolute",
-                    right: 0,
-                    bottom: 0,
-                    height: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                    opacity: isDark ? 0.9 : 0.8,
-                    pointerEvents: "none",
-                    zIndex: 0
-                }}
+                className="footer-graphic"
             />
 
         </footer>
