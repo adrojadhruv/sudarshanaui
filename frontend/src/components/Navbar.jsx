@@ -190,12 +190,9 @@ export default function Navbar({ user, setUser }) {
                             }}>Logout</button>
                         </>
                     ) : (
-                        <div style={{ display: "flex", gap: "12px" }}>
-                            <Link to="/login" style={{ textDecoration: "none", color: colors.text, fontWeight: "600" }}>Login</Link>
-                            <Link to="/signup" style={{
-                                textDecoration: "none", background: colors.text, color: colors.background,
-                                padding: "8px 16px", borderRadius: "20px", fontWeight: "600"
-                            }}>Sign Up</Link>
+                        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                            <Link to="/login" className="btn-simple btn-simple-secondary" style={{ color: colors.text, borderColor: colors.border }}>Login</Link>
+                            <Link to="/signup" className="btn-simple btn-simple-primary" style={{ background: colors.text, color: colors.background, borderColor: colors.text }}>Sign Up</Link>
                         </div>
                     )}
                 </div>

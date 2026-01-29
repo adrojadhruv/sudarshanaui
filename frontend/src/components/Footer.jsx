@@ -82,11 +82,12 @@ export default function Footer({ user }) {
         if (!user) {
             links = [
                 { label: "explore", path: "/explore" },
-                { label: "gallery", path: "/gallery" },
-                { label: "login", path: "/login" }
+                { label: "login", path: "/login" },
+                { label: "signup", path: "/signup" }
             ];
         } else {
             links = [
+                { label: "explore", path: "/explore" },
                 { label: "library", path: "/components" },
                 { label: "requests", path: "/requests" },
                 { label: "profile", path: "/profile" }

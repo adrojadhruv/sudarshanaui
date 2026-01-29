@@ -312,7 +312,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="hero-btn" style={{ position: "relative", zIndex: 10, marginBottom: "40px", display: "flex", gap: "20px" }}>
-                    <button onClick={() => navigate('/components')} style={{
+                    <button onClick={() => navigate('/login')} style={{
                         height: "56px", padding: "0 36px", borderRadius: "100px", background: "#fbbf24", color: "#000",
                         fontSize: "0.95rem", fontWeight: "700", border: "none", cursor: "pointer",
                         boxShadow: "0 10px 40px -10px rgba(251, 191, 36, 0.5)", transition: "transform 0.2s"

@@ -190,3 +190,45 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #ffe066, #ffad33);
 }
+
+/* Simple Button Styles */
+.btn-simple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  height: 40px;
+  line-height: 1;
+}
+
+.btn-simple-primary {
+  background-color: var(--text-color, #213547);
+  color: var(--bg-color, #ffffff);
+  border: 1px solid var(--text-color, #213547);
+}
+
+.btn-simple-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-simple-secondary {
+  background-color: transparent;
+  color: var(--text-color, #213547);
+  border: 1px solid var(--text-color, #213547);
+}
+
+.btn-simple-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-simple-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
