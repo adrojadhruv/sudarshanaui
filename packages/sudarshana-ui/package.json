@@ -1,7 +1,7 @@
 {
     "name": "@sudarshanaui/ui",
-    "version": "1.0.1",
-    "description": "The official component library for Sudarshana - Elegant, modern, and accessible React components.",
+    "version": "1.0.2",
+    "description": "A collection of modern, animated React components.",
     "main": "index.js",
     "publishConfig": {
         "access": "public"
@@ -9,25 +9,15 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Start-Up-Sudarshana/sudarshana.git"
-    },
     "keywords": [
-        "sudarshana",
-        "ui",
         "react",
         "components",
-        "design-system",
-        "accessible",
-        "modern"
+        "ui",
+        "animation"
     ],
-    "author": "Sudarshana Team <contact@sudarshana.com>",
+    "author": "Sudarshana Team",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Start-Up-Sudarshana/sudarshana/issues"
-    },
-    "homepage": "https://sudarshana.com",
+    "homepage": "https://sudarshanaui.vercel.app",
     "dependencies": {},
     "peerDependencies": {
         "react": ">=18.0.0",

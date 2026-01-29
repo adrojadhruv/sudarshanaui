@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 
@@ -32,23 +32,24 @@ export default function Footer({ user }) {
     const LinkItem = ({ label, path }) => {
         const [hover, setHover] = useState(false);
         return (
-            <span
-                onClick={() => navigate(path)}
+            <Link
+                to={path}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 style={{
-                    cursor: "pointer",
+                    textDecoration: "none",
                     fontSize: "0.95rem",
                     fontWeight: "500",
                     color: hover ? headingColor : textColor,
                     transition: "all 0.2s ease",
                     letterSpacing: "0.2px",
                     // Subtle "more" interaction -> slight shift
-                    transform: hover ? "translateY(-1px)" : "none"
+                    transform: hover ? "translateY(-1px)" : "none",
+                    display: "inline-block"
                 }}
             >
                 {label}
-            </span>
+            </Link>
         );
     };
 

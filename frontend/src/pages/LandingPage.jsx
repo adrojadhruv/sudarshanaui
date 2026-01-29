@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
@@ -312,11 +312,12 @@ export default function LandingPage() {
                 </div>
 
                 <div className="hero-btn" style={{ position: "relative", zIndex: 10, marginBottom: "40px", display: "flex", gap: "20px" }}>
-                    <button onClick={() => navigate('/login')} style={{
+                    <Link to="/login" style={{
+                        display: "flex", alignItems: "center", justifyContent: "center",
                         height: "56px", padding: "0 36px", borderRadius: "100px", background: "#fbbf24", color: "#000",
-                        fontSize: "0.95rem", fontWeight: "700", border: "none", cursor: "pointer",
+                        fontSize: "0.95rem", fontWeight: "700", textDecoration: "none",
                         boxShadow: "0 10px 40px -10px rgba(251, 191, 36, 0.5)", transition: "transform 0.2s"
-                    }}>Start Building</button>
+                    }}>Start Building</Link>
                 </div>
             </section>
 

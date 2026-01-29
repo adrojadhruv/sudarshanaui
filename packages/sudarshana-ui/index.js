@@ -22,4 +22,3 @@ export * from './src/AdminchoiceParallaxImageLink';
 export * from './src/AdminchoiceGlitchTitle';
 export * from './src/AdminchoiceInteractiveToggle';
 export * from './src/AdminchoiceSpotlightInput';
-export * from './src/Testing';

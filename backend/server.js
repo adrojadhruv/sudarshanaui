@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const compression = require("compression");
+app.use(compression());
 const cors = require("cors");
 const allowedOrigins = [
     "http://localhost:5173",
