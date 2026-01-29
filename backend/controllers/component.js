@@ -445,6 +445,42 @@ exports.generatePackage = async (req, res) => {
     const fileName = safeName; // MyButton
     const cssFileName = `${fileName}.css`;
 
+    // CALC VERSION (Hoisted for both modes)
+    let pkgVersion = component.version || "1.0.0";
+    if (component.publishedVersion) {
+      const parts = component.publishedVersion.split(".");
+      const major = parts[0] || "1";
+      const minor = parts[1] || "0";
+      const patch = parseInt(parts[2] || "0") + 1;
+      pkgVersion = `${major}.${minor}.${patch}`;
+    }
+
+    // 0. HANDLE CODE MODE (If raw code exists)
+    if (component.definition && component.definition.code) {
+      const packageJson = {
+        name: `@sudarshanaui/${component.name.toLowerCase().replace(/\s+/g, "-")}`,
+        version: pkgVersion,
+        main: "index.js",
+        peerDependencies: {
+          react: ">=16"
+        }
+      };
+
+      // In Code Mode, we assume the user exported default or named.
+      // We'll re-export everything for maximum compatibility.
+      const indexJs = `export * from './${fileName}';\nexport { default } from './${fileName}';`;
+
+      return res.status(200).json({
+        success: true,
+        files: {
+          "package.json": JSON.stringify(packageJson, null, 2),
+          "index.js": indexJs,
+          [`${fileName}.jsx`]: component.definition.code,
+          "README.md": `# ${component.name}\n\nGenerated from Sudarshana UI (Code Mode).\n\n## Usage\n\n\`\`\`jsx\nimport ${safeName} from './${fileName}';\n\n<${safeName} />\n\`\`\``
+        }
+      });
+    }
+
     // 1. GENERATE CSS
     // definition.styles = { ".btn": { color: "red" } }
     let cssContent = "";
@@ -508,17 +544,8 @@ export const ${safeName} = ${propsString} => {
 };
 `;
 
-    // 3. DETERMINE VERSION
-    // If publishedVersion exists (e.g. 1.0.0), we auto-increment to next patch (1.0.1)
-    // to avoid "cannot publish over existing version" error.
-    let pkgVersion = component.version || "1.0.0";
-    if (component.publishedVersion) {
-      const parts = component.publishedVersion.split(".");
-      const major = parts[0] || "1";
-      const minor = parts[1] || "0";
-      const patch = parseInt(parts[2] || "0") + 1;
-      pkgVersion = `${major}.${minor}.${patch}`;
-    }
+    // 3. DETERMINE VERSION (Already calculated above)
+
 
     // 4. GENERATE PACKAGE.JSON
     const packageJson = {
