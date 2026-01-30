@@ -191,8 +191,8 @@ export default function Navbar({ user, setUser }) {
                         </>
                     ) : (
                         <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-                            <Link to="/login" className="btn-simple btn-simple-secondary" style={{ color: colors.text, borderColor: colors.border }}>Login</Link>
-                            <Link to="/signup" className="btn-simple btn-simple-primary" style={{ background: colors.text, color: colors.background, borderColor: colors.text }}>Sign Up</Link>
+                            <Link to="/login" className="sd-btn-simple sd-btn-simple-secondary" style={{ color: colors.text, borderColor: colors.border }}>Login</Link>
+                            <Link to="/signup" className="sd-btn-simple sd-btn-simple-primary" style={{ background: colors.text, color: colors.background, borderColor: colors.text }}>Sign Up</Link>
                         </div>
                     )}
                 </div>

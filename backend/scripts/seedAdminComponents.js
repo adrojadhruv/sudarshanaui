@@ -10,9 +10,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Kinetic Marquee Button",
     category: "Button",
-    markup: "\n<button class=\"kinetic-mag-btn\">\n  <div class=\"marquee-wrap\">\n    <div class=\"marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n    </div>\n    <div class=\"marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"icon\"/>\n    </div>\n  </div>\n</button>\n",
+    markup: "\n<button class=\"sd-kinetic-mag-btn\">\n  <div class=\"sd-marquee-wrap\">\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n  </div>\n</button>\n",
     styles: {
-      ".kinetic-mag-btn": {
+      ".sd-kinetic-mag-btn": {
         "position": "relative",
         "width": "240px",
         "height": "64px",
@@ -26,36 +26,36 @@ const adminComponents = [
         "font-weight": "800",
         "transition": "transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s"
       },
-      ".kinetic-mag-btn:hover": {
+      ".sd-kinetic-mag-btn:hover": {
         "transform": "scale(1.05) rotate(-1deg)",
         "background": "#222"
       },
-      ".kinetic-mag-btn:active": {
+      ".sd-kinetic-mag-btn:active": {
         "transform": "scale(0.95) rotate(0deg)",
         "transition": "transform 0.1s"
       },
-      ".marquee-wrap": {
+      ".sd-marquee-wrap": {
         "display": "flex",
         "width": "100%",
         "height": "100%",
         "align-items": "center",
         "mask-image": "linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent)"
       },
-      ".marquee-track": {
+      ".sd-marquee-track": {
         "display": "flex",
         "align-items": "center",
         "white-space": "nowrap",
         "animation": "k-scroll 6s linear infinite",
         "transition": "animation-duration 0.3s"
       },
-      ".kinetic-mag-btn:hover .marquee-track": {
+      ".sd-kinetic-mag-btn:hover .sd-marquee-track": {
         "animation-duration": "3s"
       },
-      ".marquee-track span": {
+      ".sd-marquee-track span": {
         "padding-left": "20px",
         "font-size": "16px"
       },
-      ".icon": {
+      ".sd-icon": {
         "width": "20px",
         "height": "20px",
         "margin-left": "10px",
@@ -74,9 +74,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Noise Glass Card",
     category: "Card",
-    markup: "\n<div class=\"grain-card\">\n  <div class=\"grain-bg\"></div>\n  <div class=\"grain-content\">\n    <div class=\"badge\">NEW</div>\n    <h3>FROSTED</h3>\n    <p>Hyper-realistic Grain</p>\n  </div>\n</div>\n",
+    markup: "\n<div class=\"sd-grain-card\">\n  <div class=\"sd-grain-bg\"></div>\n  <div class=\"sd-grain-content\">\n    <div class=\"sd-badge\">NEW</div>\n    <h3>FROSTED</h3>\n    <p>Hyper-realistic Grain</p>\n  </div>\n</div>\n",
     styles: {
-      ".grain-card": {
+      ".sd-grain-card": {
         "width": "280px",
         "height": "380px",
         "position": "relative",
@@ -89,7 +89,7 @@ const adminComponents = [
         "cursor": "pointer",
         "transition": "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), background 0.6s, box-shadow 0.6s"
       },
-      ".grain-bg": {
+      ".sd-grain-bg": {
         "position": "absolute",
         "inset": "-50%",
         "background-image": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E\")",
@@ -97,7 +97,7 @@ const adminComponents = [
         "pointer-events": "none",
         "transition": "opacity 0.6s"
       },
-      ".grain-content": {
+      ".sd-grain-content": {
         "position": "absolute",
         "inset": "0",
         "padding": "30px",
@@ -108,23 +108,23 @@ const adminComponents = [
         "z-index": "2",
         "transition": "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)"
       },
-      ".grain-card:hover": {
+      ".sd-grain-card:hover": {
         "background": "rgba(255,255,255,0.15)",
         "transform": "translateY(-15px) scale(1.02) rotateX(2deg)",
         "box-shadow": "0 30px 60px rgba(0,0,0,0.5)"
       },
-      ".grain-card:hover .grain-bg": {
+      ".sd-grain-card:hover .sd-grain-bg": {
         "opacity": "0.6"
       },
-      ".grain-card:hover .grain-content": {
+      ".sd-grain-card:hover .sd-grain-content": {
         "transform": "translateY(-10px)"
       },
-      ".grain-card:active": {
+      ".sd-grain-card:active": {
         "transform": "translateY(-5px) scale(0.98)",
         "box-shadow": "0 10px 30px rgba(0,0,0,0.3)",
         "transition": "all 0.1s"
       },
-      ".badge": {
+      ".sd-badge": {
         "align-self": "flex-start",
         "padding": "6px 12px",
         "background": "#fff",
@@ -134,14 +134,14 @@ const adminComponents = [
         "font-weight": "bold",
         "margin-bottom": "auto"
       },
-      ".grain-content h3": {
+      ".sd-grain-content h3": {
         "font-family": "arial, sans-serif",
         "font-weight": "900",
         "font-size": "36px",
         "margin": "0 0 10px 0",
         "letter-spacing": "-1px"
       },
-      ".grain-content p": {
+      ".sd-grain-content p": {
         "font-family": "monospace",
         "opacity": "0.6",
         "margin": "0"
@@ -151,9 +151,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Magnetic Attraction Button",
     category: "Button",
-    markup: "\n<button class=\"magnet-core\">\n  <span class=\"magnet-text\">MAGNETIC</span>\n  <div class=\"magnet-field\"></div>\n  <div class=\"magnet-ripple\"></div>\n</button>\n",
+    markup: "\n<button class=\"sd-magnet-core\">\n  <span class=\"sd-magnet-text\">MAGNETIC</span>\n  <div class=\"sd-magnet-field\"></div>\n  <div class=\"sd-magnet-ripple\"></div>\n</button>\n",
     styles: {
-      ".magnet-core": {
+      ".sd-magnet-core": {
         "position": "relative",
         "padding": "25px 50px",
         "background": "transparent",
@@ -166,7 +166,7 @@ const adminComponents = [
         "overflow": "hidden",
         "transition": "all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)"
       },
-      ".magnet-field": {
+      ".sd-magnet-field": {
         "position": "absolute",
         "top": "50%",
         "left": "50%",
@@ -178,19 +178,19 @@ const adminComponents = [
         "transition": "width 0.6s cubic-bezier(0.19, 1, 0.22, 1), height 0.6s cubic-bezier(0.19, 1, 0.22, 1)",
         "z-index": "-1"
       },
-      ".magnet-core:hover .magnet-field": {
+      ".sd-magnet-core:hover .sd-magnet-field": {
         "width": "350px",
         "height": "350px"
       },
-      ".magnet-core:hover": {
+      ".sd-magnet-core:hover": {
         "color": "#000",
         "border-color": "transparent",
         "transform": "scale(1.05)"
       },
-      ".magnet-core:active": {
+      ".sd-magnet-core:active": {
         "transform": "scale(0.95)"
       },
-      ".magnet-ripple": {
+      ".sd-magnet-ripple": {
         "position": "absolute",
         "top": "50%",
         "left": "50%",
@@ -202,10 +202,10 @@ const adminComponents = [
         "opacity": "0",
         "pointer-events": "none"
       },
-      ".magnet-core:active .magnet-ripple": {
+      ".sd-magnet-core:active .sd-magnet-ripple": {
         "animation": "mag-ping 0.6s cubic-bezier(0, 0, 0.2, 1)"
       },
-      ".magnet-text": {
+      ".sd-magnet-text": {
         "position": "relative",
         "z-index": "2"
       },
@@ -224,9 +224,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Reveal Mask Text",
     category: "Text",
-    markup: "\n<h1 class=\"masked-h1\" data-label=\"CREATIVE\">\n  CREATIVE\n</h1>\n",
+    markup: "\n<h1 class=\"sd-masked-h1\" data-label=\"CREATIVE\">\n  CREATIVE\n</h1>\n",
     styles: {
-      ".masked-h1": {
+      ".sd-masked-h1": {
         "font-family": "impact, sans-serif",
         "font-size": "90px",
         "color": "#222",
@@ -237,7 +237,7 @@ const adminComponents = [
         "line-height": "1",
         "transition": "transform 0.4s"
       },
-      ".masked-h1::before": {
+      ".sd-masked-h1::before": {
         "content": "attr(data-label)",
         "position": "absolute",
         "top": "0",
@@ -249,13 +249,13 @@ const adminComponents = [
         "clip-path": "circle(0% at 50% 50%)",
         "transition": "clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
       },
-      ".masked-h1:hover::before": {
+      ".sd-masked-h1:hover::before": {
         "clip-path": "circle(100% at 50% 50%)"
       },
-      ".masked-h1:hover": {
+      ".sd-masked-h1:hover": {
         "transform": "scale(1.02)"
       },
-      ".masked-h1:active": {
+      ".sd-masked-h1:active": {
         "transform": "scale(0.98)"
       }
     }
@@ -263,9 +263,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Liquid Morph Loader",
     category: "Loader",
-    markup: "\n<div class=\"gooey-wrap\">\n  <svg style=\"width:0;height:0;position:absolute;\"><filter id=\"goo-sharp\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\" result=\"blur\"/><feColorMatrix in=\"blur\" values=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9\" result=\"goo\"/><feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\"/></filter></svg>\n  <div class=\"blobs\">\n    <div class=\"blob-main\"></div>\n    <div class=\"blob-orbit\"></div>\n  </div>\n</div>\n",
+    markup: "\n<div class=\"sd-gooey-wrap\">\n  <svg style=\"width:0;height:0;position:absolute;\"><filter id=\"goo-sharp\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\" result=\"blur\"/><feColorMatrix in=\"blur\" values=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9\" result=\"goo\"/><feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\"/></filter></svg>\n  <div class=\"sd-blobs\">\n    <div class=\"sd-blob-main\"></div>\n    <div class=\"sd-blob-orbit\"></div>\n  </div>\n</div>\n",
     styles: {
-      ".gooey-wrap": {
+      ".sd-gooey-wrap": {
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -273,15 +273,15 @@ const adminComponents = [
         "cursor": "wait",
         "transition": "transform 0.3s"
       },
-      ".gooey-wrap:hover": {
+      ".sd-gooey-wrap:hover": {
         "transform": "scale(1.1)"
       },
-      ".blobs": {
+      ".sd-blobs": {
         "width": "100%",
         "height": "100%",
         "animation": "rotate-g 4s linear infinite"
       },
-      ".blob-main": {
+      ".sd-blob-main": {
         "position": "absolute",
         "top": "35px",
         "left": "35px",
@@ -291,7 +291,7 @@ const adminComponents = [
         "border-radius": "50%",
         "transition": "background 0.3s"
       },
-      ".blob-orbit": {
+      ".sd-blob-orbit": {
         "position": "absolute",
         "top": "10px",
         "left": "40px",
@@ -302,7 +302,7 @@ const adminComponents = [
         "animation": "orbit-g 2s ease-in-out infinite alternate",
         "transition": "background 0.3s"
       },
-      ".gooey-wrap:active .blob-main, .gooey-wrap:active .blob-orbit": {
+      ".sd-gooey-wrap:active .sd-blob-main, .sd-gooey-wrap:active .sd-blob-orbit": {
         "background": "#00ff88"
       },
       "@keyframes rotate-g": {
@@ -323,16 +323,16 @@ const adminComponents = [
   {
     name: "AdminChoice - Creative Grid Menu",
     category: "Menu",
-    markup: "\n<nav class=\"brut-nav\">\n  <a href=\"#\" class=\"brut-link\"><span>01</span> WORK</a>\n  <a href=\"#\" class=\"brut-link\"><span>02</span> STUDIO</a>\n  <a href=\"#\" class=\"brut-link\"><span>03</span> CONTACT</a>\n</nav>\n",
+    markup: "\n<nav class=\"sd-brut-nav\">\n  <a href=\"#\" class=\"sd-brut-link\"><span>01</span> WORK</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>02</span> STUDIO</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>03</span> CONTACT</a>\n</nav>\n",
     styles: {
-      ".brut-nav": {
+      ".sd-brut-nav": {
         "display": "flex",
         "flex-direction": "column",
         "border": "1px solid #fff",
         "width": "220px",
         "background": "#000"
       },
-      ".brut-link": {
+      ".sd-brut-link": {
         "display": "flex",
         "justify-content": "space-between",
         "padding": "24px",
@@ -345,10 +345,10 @@ const adminComponents = [
         "overflow": "hidden",
         "transition": "color 0.3s, padding 0.3s"
       },
-      ".brut-link:last-child": {
+      ".sd-brut-link:last-child": {
         "border-bottom": "none"
       },
-      ".brut-link::before": {
+      ".sd-brut-link::before": {
         "content": "\"\"",
         "position": "absolute",
         "top": "0",
@@ -360,22 +360,22 @@ const adminComponents = [
         "transition": "transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)",
         "z-index": "-1"
       },
-      ".brut-link:hover": {
+      ".sd-brut-link:hover": {
         "color": "#000",
         "padding-left": "34px"
       },
-      ".brut-link:hover::before": {
+      ".sd-brut-link:hover::before": {
         "transform": "translateX(0)"
       },
-      ".brut-link:active": {
+      ".sd-brut-link:active": {
         "opacity": "0.8"
       },
-      ".brut-link span": {
+      ".sd-brut-link span": {
         "font-family": "monospace",
         "opacity": "0.5",
         "transition": "opacity 0.3s"
       },
-      ".brut-link:hover span": {
+      ".sd-brut-link:hover span": {
         "opacity": "1"
       }
     }
@@ -383,16 +383,16 @@ const adminComponents = [
   {
     name: "AdminChoice - Parallax Image Link",
     category: "Link",
-    markup: "\n<a href=\"#\" class=\"hover-img-link\" data-label=\"VIEW CASE\">\n  <span class=\"link-text\">ARCHITECTURE</span>\n  <div class=\"img-float\" style=\"background-image: url('https://picsum.photos/300/200?grayscale')\"></div>\n</a>\n",
+    markup: "\n<a href=\"#\" class=\"sd-hover-img-link\" data-label=\"VIEW CASE\">\n  <span class=\"sd-link-text\">ARCHITECTURE</span>\n  <div class=\"sd-img-float\" style=\"background-image: url('https://picsum.photos/300/200?grayscale')\"></div>\n</a>\n",
     styles: {
-      ".hover-img-link": {
+      ".sd-hover-img-link": {
         "position": "relative",
         "display": "inline-block",
         "text-decoration": "none",
         "cursor": "none",
         "padding": "10px"
       },
-      ".link-text": {
+      ".sd-link-text": {
         "font-family": "times new roman, serif",
         "font-style": "italic",
         "font-size": "48px",
@@ -400,7 +400,7 @@ const adminComponents = [
         "border-bottom": "1px solid rgba(255,255,255,0.3)",
         "transition": "all 0.3s"
       },
-      ".img-float": {
+      ".sd-img-float": {
         "position": "absolute",
         "top": "50%",
         "left": "100%",
@@ -414,15 +414,15 @@ const adminComponents = [
         "border-radius": "8px",
         "transition": "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
       },
-      ".hover-img-link:hover .img-float": {
+      ".sd-hover-img-link:hover .sd-img-float": {
         "opacity": "1",
         "transform": "translate(40px, -50%) scale(1) rotate(0deg)"
       },
-      ".hover-img-link:hover .link-text": {
+      ".sd-hover-img-link:hover .sd-link-text": {
         "opacity": "0.5",
         "letter-spacing": "2px"
       },
-      ".hover-img-link:active .link-text": {
+      ".sd-hover-img-link:active .sd-link-text": {
         "opacity": "0.2"
       }
     }
@@ -430,9 +430,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Glitch Title",
     category: "Text",
-    markup: "\n<h1 class=\"rgb-text\" data-text=\"SYSTEM_FAILURE\">SYSTEM_FAILURE</h1>\n",
+    markup: "\n<h1 class=\"sd-rgb-text\" data-text=\"SYSTEM_FAILURE\">SYSTEM_FAILURE</h1>\n",
     styles: {
-      ".rgb-text": {
+      ".sd-rgb-text": {
         "font-family": "monospace",
         "font-weight": "bold",
         "font-size": "48px",
@@ -442,10 +442,10 @@ const adminComponents = [
         "cursor": "help",
         "transition": "transform 0.2s"
       },
-      ".rgb-text:hover": {
+      ".sd-rgb-text:hover": {
         "transform": "scale(1.05) skewX(-2deg)"
       },
-      ".rgb-text::before, .rgb-text::after": {
+      ".sd-rgb-text::before, .sd-rgb-text::after": {
         "content": "attr(data-text)",
         "position": "absolute",
         "top": "0",
@@ -455,18 +455,18 @@ const adminComponents = [
         "opacity": "0.8",
         "transition": "animation-duration 0.2s"
       },
-      ".rgb-text:hover::before": {
+      ".sd-rgb-text:hover::before": {
         "animation-duration": "0.1s"
       },
-      ".rgb-text:hover::after": {
+      ".sd-rgb-text:hover::after": {
         "animation-duration": "0.1s"
       },
-      ".rgb-text::before": {
+      ".sd-rgb-text::before": {
         "color": "#ff0000",
         "z-index": "-1",
         "animation": "rgb-1 8s infinite"
       },
-      ".rgb-text::after": {
+      ".sd-rgb-text::after": {
         "color": "#0000ff",
         "z-index": "-2",
         "animation": "rgb-2 8s infinite"
@@ -507,18 +507,18 @@ const adminComponents = [
   {
     name: "AdminChoice - Interactive Toggle",
     category: "Toggle",
-    markup: "\n<label class=\"pill-toggle\">\n  <input type=\"checkbox\">\n  <div class=\"pill-track\">\n    <span class=\"label-off\">OFF</span>\n    <span class=\"label-on\">ON</span>\n  </div>\n  <div class=\"pill-thumb\"></div>\n</label>\n",
+    markup: "\n<label class=\"sd-pill-toggle\">\n  <input type=\"checkbox\">\n  <div class=\"sd-pill-track\">\n    <span class=\"sd-label-off\">OFF</span>\n    <span class=\"sd-label-on\">ON</span>\n  </div>\n  <div class=\"sd-pill-thumb\"></div>\n</label>\n",
     styles: {
-      ".pill-toggle": {
+      ".sd-pill-toggle": {
         "position": "relative",
         "width": "80px",
         "height": "36px",
         "cursor": "pointer"
       },
-      ".pill-toggle input": {
+      ".sd-pill-toggle input": {
         "display": "none"
       },
-      ".pill-track": {
+      ".sd-pill-track": {
         "width": "100%",
         "height": "100%",
         "background": "#222",
@@ -534,10 +534,10 @@ const adminComponents = [
         "color": "#555",
         "transition": "background 0.3s"
       },
-      ".pill-toggle:hover .pill-track": {
+      ".sd-pill-toggle:hover .sd-pill-track": {
         "background": "#333"
       },
-      ".pill-thumb": {
+      ".sd-pill-thumb": {
         "position": "absolute",
         "top": "3px",
         "left": "3px",
@@ -547,14 +547,14 @@ const adminComponents = [
         "border-radius": "50%",
         "transition": "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
       },
-      ".pill-toggle:active .pill-thumb": {
+      ".sd-pill-toggle:active .sd-pill-thumb": {
         "width": "36px"
       },
-      "input:checked ~ .pill-thumb": {
+      "input:checked ~ .sd-pill-thumb": {
         "transform": "translateX(44px)",
         "background": "#00ff88"
       },
-      "input:checked ~ .pill-track .label-on": {
+      "input:checked ~ .sd-pill-track .sd-label-on": {
         "color": "#fff"
       }
     }
@@ -562,9 +562,9 @@ const adminComponents = [
   {
     name: "AdminChoice - Spotlight Input",
     category: "Input",
-    markup: "\n<div class=\"halo-input\">\n  <input type=\"email\" placeholder=\"notify@me.com\">\n  <div class=\"halo-border\"></div>\n  <div class=\"halo-glow\"></div>\n</div>\n",
+    markup: "\n<div class=\"sd-halo-input\">\n  <input type=\"email\" placeholder=\"notify@me.com\">\n  <div class=\"sd-halo-border\"></div>\n  <div class=\"sd-halo-glow\"></div>\n</div>\n",
     styles: {
-      ".halo-input": {
+      ".sd-halo-input": {
         "position": "relative",
         "width": "300px",
         "background": "#000",
@@ -573,10 +573,10 @@ const adminComponents = [
         "overflow": "visible",
         "transition": "transform 0.2s"
       },
-      ".halo-input:hover": {
+      ".sd-halo-input:hover": {
         "transform": "scale(1.02)"
       },
-      ".halo-border": {
+      ".sd-halo-border": {
         "position": "absolute",
         "top": "-100%",
         "left": "-100%",
@@ -588,20 +588,20 @@ const adminComponents = [
         "transition": "opacity 0.3s",
         "pointer-events": "none"
       },
-      ".halo-glow": {
+      ".sd-halo-glow": {
         "position": "absolute",
         "inset": "0",
         "background": "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%)",
         "opacity": "0",
         "transition": "opacity 0.4s"
       },
-      ".halo-input:hover .halo-glow": {
+      ".sd-halo-input:hover .sd-halo-glow": {
         "opacity": "1"
       },
-      ".halo-input:focus-within .halo-border": {
+      ".sd-halo-input:focus-within .sd-halo-border": {
         "opacity": "1"
       },
-      ".halo-input input": {
+      ".sd-halo-input input": {
         "position": "relative",
         "width": "100%",
         "padding": "16px",
@@ -614,7 +614,7 @@ const adminComponents = [
         "z-index": "2",
         "transition": "background 0.3s"
       },
-      ".halo-input:hover input": {
+      ".sd-halo-input:hover input": {
         "background": "#1a1a1a"
       },
       "@keyframes halo-spin": {
@@ -641,13 +641,25 @@ const run = async () => {
 
     console.log("Connected to DB");
 
-    const admin = await User.findOne({ role: 'admin' });
+    let admin = await User.findOne({ role: 'admin' });
     if (!admin) {
-      console.error("Admin user not found in DB");
-      throw new Error("No admin found");
+      console.log("Admin role not found. Checking by email dhruv@admin.com...");
+      admin = await User.findOne({ email: "dhruv@admin.com" });
     }
 
-    console.log("Found Admin: ", admin.email);
+    if (!admin) {
+      console.log("Admin not found. Creating default admin...");
+      admin = await User.create({
+        name: "dhruv1",
+        email: "dhruv@admin.com",
+        password: "$2b$10$9AB//SEwc1esqtCAMRLVNeKfFh9PF3IFX9qZcxgbdhOLpjkpaHtmG",
+        role: "admin",
+        avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=3yjyfg"
+      });
+      console.log("Created Admin: ", admin.email);
+    } else {
+      console.log("Found Admin: ", admin.email);
+    }
 
     // 1. Delete Existing Broken Admin Choice Components
     console.log("Cleaning up old AdminChoice components...");

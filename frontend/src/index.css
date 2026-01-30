@@ -202,7 +202,7 @@ button:focus-visible {
 }
 
 /* Simple Button Styles */
-.btn-simple {
+.sd-btn-simple {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -216,42 +216,42 @@ button:focus-visible {
     line-height: 1;
 }
 
-.btn-simple-primary {
+.sd-btn-simple-primary {
     background-color: var(--text-color, #213547);
     color: var(--bg-color, #ffffff);
     border: 1px solid var(--text-color, #213547);
 }
 
-.btn-simple-primary:hover {
+.sd-btn-simple-primary:hover {
     opacity: 0.9;
     transform: translateY(-1px);
 }
 
-.btn-simple-secondary {
+.sd-btn-simple-secondary {
     background-color: transparent;
     color: var(--text-color, #213547);
     border: 1px solid var(--text-color, #213547);
 }
 
-.btn-simple-secondary:hover {
+.sd-btn-simple-secondary:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
-    .btn-simple-secondary:hover {
+    .sd-btn-simple-secondary:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
 }
 
 /* --- HERO RESPONSIVENESS --- */
-.hero-bg-img {
+.sd-hero-bg-img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
 @media (max-width: 768px) {
-    .hero-bg-img {
+    .sd-hero-bg-img {
         background-size: cover;
         /* Fills the screen on mobile for "laptop-like" immersion */
         background-position: center bottom;

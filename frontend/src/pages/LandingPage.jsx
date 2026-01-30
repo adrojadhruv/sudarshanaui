@@ -24,13 +24,13 @@ const SHOWCASE_COMPONENTS = [
         npmPackageName: "@sudarshana/prism-button",
         definition: {
             markup: `
-<button class="prism-btn">
-    <span class="btn-text">Explore</span>
-    <div class="shine"></div>
+<button class="sd-prism-btn">
+    <span class="sd-btn-text">Explore</span>
+    <div class="sd-shine"></div>
 </button>
         `,
             styles: {
-                ".prism-btn": {
+                ".sd-prism-btn": {
                     "position": "relative",
                     "padding": "16px 36px",
                     "background": "rgba(255, 255, 255, 0.05)",
@@ -47,11 +47,11 @@ const SHOWCASE_COMPONENTS = [
                     "box-shadow": "0 10px 40px rgba(0, 0, 0, 0.2)",
                     "transition": "all 0.4s cubic-bezier(0.23, 1, 0.32, 1)"
                 },
-                ".prism-btn:hover": {
+                ".sd-prism-btn:hover": {
                     "transform": "translateY(-4px) scale(1.02)",
                     "box-shadow": "0 20px 60px rgba(139, 92, 246, 0.3), inset 0 0 0 2px rgba(255,255,255,0.2)"
                 },
-                ".shine": {
+                ".sd-shine": {
                     "position": "absolute",
                     "top": "0", "left": "-100%",
                     "width": "50%", "height": "100%",
@@ -59,7 +59,7 @@ const SHOWCASE_COMPONENTS = [
                     "transform": "skewX(-20deg)",
                     "transition": "0.5s"
                 },
-                ".prism-btn:hover .shine": {
+                ".sd-prism-btn:hover .sd-shine": {
                     "left": "200%",
                     "transition": "0.5s ease-in-out"
                 }
@@ -76,14 +76,14 @@ const SHOWCASE_COMPONENTS = [
         npmPackageName: "@sudarshana/void-card",
         definition: {
             markup: `
-<div class="void-card">
-    <div class="glow"></div>
-    <h3 class="title">System Ready</h3>
-    <p class="subtitle">All systems operational. Waiting for input.</p>
+<div class="sd-void-card">
+    <div class="sd-glow"></div>
+    <h3 class="sd-title">System Ready</h3>
+    <p class="sd-subtitle">All systems operational. Waiting for input.</p>
 </div>
         `,
             styles: {
-                ".void-card": {
+                ".sd-void-card": {
                     "width": "280px",
                     "padding": "32px",
                     "background": "#050505",
@@ -95,21 +95,21 @@ const SHOWCASE_COMPONENTS = [
                     "flex-direction": "column",
                     "gap": "12px"
                 },
-                ".title": {
+                ".sd-title": {
                     "margin": "0",
                     "color": "#fff",
                     "font-size": "20px",
                     "font-weight": "700",
                     "z-index": "2"
                 },
-                ".subtitle": {
+                ".sd-subtitle": {
                     "margin": "0",
                     "color": "#666",
                     "font-size": "14px",
                     "line-height": "1.5",
                     "z-index": "2"
                 },
-                ".glow": {
+                ".sd-glow": {
                     "position": "absolute",
                     "top": "-50%", "left": "-50%",
                     "width": "200%", "height": "200%",
@@ -118,11 +118,11 @@ const SHOWCASE_COMPONENTS = [
                     "pointer-events": "none",
                     "transition": "opacity 0.3s"
                 },
-                ".void-card:hover .glow": {
+                ".sd-void-card:hover .sd-glow": {
                     "background": "radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.25), transparent 50%)",
                     "opacity": "1"
                 },
-                ".void-card::before": {
+                ".sd-void-card::before": {
                     "content": "''", "position": "absolute", "inset": "0",
                     "border-radius": "24px", "padding": "1px",
                     "background": "linear-gradient(45deg, #10b981, transparent)",
@@ -144,20 +144,20 @@ const SHOWCASE_COMPONENTS = [
         npmPackageName: "@sudarshana/liquid-toggle",
         definition: {
             markup: `
-  <label class="switch">
+  <label class="sd-switch">
       <input type="checkbox" checked />
-      <span class="slider"></span>
+      <span class="sd-slider"></span>
   </label>
           `,
             styles: {
-                ".switch": {
+                ".sd-switch": {
                     "position": "relative",
                     "display": "inline-block",
                     "width": "80px",
                     "height": "44px"
                 },
-                ".switch input": { "opacity": "0", "width": "0", "height": "0" },
-                ".slider": {
+                ".sd-switch input": { "opacity": "0", "width": "0", "height": "0" },
+                ".sd-slider": {
                     "position": "absolute",
                     "cursor": "pointer",
                     "top": "0", "left": "0", "right": "0", "bottom": "0",
@@ -166,7 +166,7 @@ const SHOWCASE_COMPONENTS = [
                     "border-radius": "34px",
                     "box-shadow": "inset 0 2px 4px rgba(0,0,0,0.1)"
                 },
-                ".slider:before": {
+                ".sd-slider:before": {
                     "position": "absolute",
                     "content": "''",
                     "height": "36px", "width": "36px",
@@ -176,8 +176,8 @@ const SHOWCASE_COMPONENTS = [
                     "border-radius": "50%",
                     "box-shadow": "0 2px 5px rgba(0,0,0,0.2)"
                 },
-                "input:checked + .slider": { "background-color": "#3b82f6" },
-                "input:checked + .slider:before": { "transform": "translateX(36px)" }
+                "input:checked + .sd-slider": { "background-color": "#3b82f6" },
+                "input:checked + .sd-slider:before": { "transform": "translateX(36px)" }
             }
         }
     }
@@ -273,7 +273,7 @@ export default function LandingPage() {
                 padding: "40px 20px"
             }}>
                 <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundColor: isDark ? "#000000" : "transparent" }}>
-                    <div className="hero-bg-img" style={{
+                    <div className="sd-hero-bg-img" style={{
                         position: "absolute", inset: "0",
                         backgroundImage: `url(${isDark ? '/darklanding.png' : '/lightlanding.png'})`,
                         // backgroundSize moved to CSS for responsiveness
