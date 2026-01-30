@@ -447,8 +447,13 @@ exports.generatePackage = async (req, res) => {
 
     // CALC VERSION (Hoisted for both modes)
     let pkgVersion = component.version || "1.0.0";
-    if (component.publishedVersion) {
-      const parts = component.publishedVersion.split(".");
+
+    // Auto-increment if:
+    // 1. No published history (fresh/seeded) -> Assume we want next patch
+    // 2. Published history matches current (no drafts) -> Assume we want next patch
+    if (!component.publishedVersion || component.version === component.publishedVersion) {
+      const base = component.publishedVersion || component.version || "1.0.0";
+      const parts = base.split(".");
       const major = parts[0] || "1";
       const minor = parts[1] || "0";
       const patch = parseInt(parts[2] || "0") + 1;

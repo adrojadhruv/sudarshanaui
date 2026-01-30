@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const User = require('../models/user.model');
 const Component = require('../models/componentModel');
+const Version = require('../models/version.model');
 
 // Load env vars
 dotenv.config({ path: '.env' });
@@ -661,13 +662,9 @@ const run = async () => {
       console.log("Found Admin: ", admin.email);
     }
 
-    // 1. Delete Existing Broken Admin Choice Components
-    console.log("Cleaning up old AdminChoice components...");
-    const deleted = await Component.deleteMany({
-      owner: admin._id,
-      name: { $regex: /^AdminChoice - / }
-    });
-    console.log("Deleted " + deleted.deletedCount + " old components.");
+    // 1. (REMOVED) Delete Existing Broken Admin Choice Components
+    // We now Upsert (Update or Create) to preserve Version History
+    console.log("Syncing AdminChoice components (Smart Seed)...");
 
     // 2. Create New Components
     for (const item of adminComponents) {
@@ -685,18 +682,50 @@ const run = async () => {
         definition.tags = ["standard", "css", "html"];
       }
 
-      await Component.create({
-        name: item.name,
-        category: item.category,
-        description: "Official Sudarshana UI Premium Component",
-        definition: definition,
-        owner: admin._id,
-        status: "approved",
-        version: "1.0.0"
-      });
+      let comp = await Component.findOne({ name: item.name, owner: admin._id });
+
+      let isNew = false;
+
+      if (comp) {
+        console.log(`  -> Updating existing: ${item.name}`);
+        comp.definition = definition;
+        // We DO NOT reset version or status here, preserving history.
+        await comp.save();
+      } else {
+        console.log(`  -> Creating new: ${item.name}`);
+        isNew = true;
+        comp = await Component.create({
+          name: item.name,
+          category: item.category,
+          description: "Official Sudarshana UI Premium Component",
+          definition: definition,
+          owner: admin._id,
+          status: "approved",
+          version: "1.0.0"
+        });
+      }
+
+      // Ensure a version snapshot exists for the Current State?
+      // For now, if we update code, we should probably ensure the 'current' state is backed by a version if it's new.
+      // But if it's existing, we might just be patching the definition in place without bumping version (Hotfix).
+
+      if (isNew) {
+        // Create Initial Version Snapshot for 1.0.0
+        await Version.create({
+          component: comp._id,
+          version: "1.0.0",
+          definition: definition,
+          author: admin._id,
+          collaborators: []
+        });
+      } else {
+        // OPTIONAL: If you want to force a version bump on seed, uncomment below.
+        // But usually seeding is just "fixing the underlying data".
+        // If the user wants to release a new version, they should use the UI or a specific migration script.
+      }
     }
 
-    console.log("All Components Seeded Successfully!");
+    console.log("All Components Synced Successfully!");
     process.exit(0);
   } catch (err) {
     console.error("Seeding Failed:", err);
