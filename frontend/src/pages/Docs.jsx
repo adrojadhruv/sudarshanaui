@@ -246,7 +246,7 @@ export default function App() {
                                     <CodeBlock code={`import { FancyButton } from '@sudarshanaui/fancy-button';
 
 // Usage is identical to the main library
-<FancyButton onClick={() => alert('Clicked!')} />`} isDark={isDark} />
+<FancyButton label="Click Me" />`} isDark={isDark} />
                                 </div>
 
                                 {/* 3. DOWNLOADED */}

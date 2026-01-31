@@ -38,8 +38,11 @@ export default function Boilerplate() {
             if (!builtTemplates[cat]) builtTemplates[cat] = {};
 
             let variant = "Normal";
-            if (comp.name.includes("Animated")) variant = "Animated";
-            if (comp.name.includes("AdminChoice")) variant = "AdminChoice";
+            if (comp.name.toLowerCase().includes("animated")) variant = "Animated";
+            // For AdminChoice, use the specific name to prevent collisions (e.g. multiple AdminChoice Buttons)
+            if (comp.name.toLowerCase().includes("adminchoice")) {
+              variant = comp.name.replace(/AdminChoice\s*-\s*/i, "").trim();
+            }
 
             builtTemplates[cat][variant] = comp.definition;
           });
