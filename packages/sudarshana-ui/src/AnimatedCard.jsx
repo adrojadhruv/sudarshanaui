@@ -14,25 +14,23 @@ const styles = `
 
 `;
 
-export const AnimatedCard = ({ title = "Hover Card", content = "Hover over me to see the effect!", ...rest }) => {
-  let html = `
-<div class="sd-card-anim">
-  <div class="sd-img-placeholder"></div>
-  <div class="sd-content">
-    <h3>{{title}}</h3>
-    <p>{{content}}</p>
-  </div>
-</div>
-      `;
-
-  // Inject props
-  html = html.replaceAll('{{title}}', title);
-  html = html.replaceAll('{{content}}', content);
-
+export const AnimatedCard = ({ title = "Hover Card", content = "Hover over me to see the effect!", children, ...rest }) => {
   return (
     <div {...rest} className="sudarshana-component-AnimatedCard">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-card-anim">
+        {children ? (
+          children
+        ) : (
+          <>
+            <div className="sd-img-placeholder"></div>
+            <div className="sd-content">
+              <h3>{title}</h3>
+              <p>{content}</p>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

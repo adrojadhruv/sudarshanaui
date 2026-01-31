@@ -14,20 +14,13 @@ const styles = `
 
 `;
 
-export const AdminchoiceRevealMaskText = (props) => {
-  let html = `
-<h1 class="sd-masked-h1" data-label="CREATIVE">
-  CREATIVE
-</h1>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceRevealMaskText = ({ text = "creative", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceRevealMaskText">
+    <div {...rest} className="sudarshana-component-AdminchoiceRevealMaskText">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <h1 className="sd-masked-h1" data-label={text}>
+        {text}
+      </h1>
     </div>
   );
 };

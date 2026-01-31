@@ -1,15 +1,14 @@
-import { FancyButton, AnimatedCard } from '@sudarshanaui/ui';
-import React from 'react';
+import './App.css';
+// import { AnimatedCard } from '@sudarshanaui/animated-card';
+import { AdminChoiceRevealMaskText } from '@sudarshanaui/adminchoice---reveal-mask-text';
 function App() {
   return (
     <>
-      <FancyButton label="Click Me"  style={{ 
-        marginTop: '20px', 
-        filter: 'hue-rotate(90deg)'
-      }}  />
-      <AnimatedCard title="Hello World" content="This is a verified component." />
+
+    <AdminChoiceRevealMaskText data-label = "dhruv" />
+
     </>
   );
-
 }
+
 export default App;

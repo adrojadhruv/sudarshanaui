@@ -13,15 +13,12 @@ const styles = `
 `;
 
 export const FancyButton = ({ label = "yo yes", ...rest }) => {
-  let html = `<button class="sd-btn-anim">{{label}}</button>`;
-
-  // Inject props
-  html = html.replaceAll('{{label}}', label);
-
   return (
-    <div {...rest} className="sudarshana-component-FancyButton">
+    <>
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+      <button className="sd-btn-anim" {...rest}>
+        {label}
+      </button>
+    </>
   );
 };

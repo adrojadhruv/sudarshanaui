@@ -18,22 +18,17 @@ const styles = `
 
 `;
 
-export const AdminchoiceCreativeGridMenu = (props) => {
-  let html = `
-<nav class="sd-brut-nav">
-  <a href="#" class="sd-brut-link"><span>01</span> WORK</a>
-  <a href="#" class="sd-brut-link"><span>02</span> STUDIO</a>
-  <a href="#" class="sd-brut-link"><span>03</span> CONTACT</a>
-</nav>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceCreativeGridMenu = ({ items = [{ label: "WORK", number: "01" }, { label: "STUDIO", number: "02" }, { label: "CONTACT", number: "03" }], ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceCreativeGridMenu">
+    <div {...rest} className="sudarshana-component-AdminchoiceCreativeGridMenu">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <nav className="sd-brut-nav">
+        {items.map((item, index) => (
+          <a key={index} href={item.href || "#"} className="sd-brut-link">
+            <span>{item.number}</span> {item.label}
+          </a>
+        ))}
+      </nav>
     </div>
   );
 };

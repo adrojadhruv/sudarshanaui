@@ -14,15 +14,15 @@ const styles = `
 `;
 
 export const AnimatedOtp = (props) => {
-  let html = `<div class="sd-otp-anim"><input type="text" maxlength="1" placeholder="•" /><input type="text" maxlength="1" placeholder="•" /><input type="text" maxlength="1" placeholder="•" /><input type="text" maxlength="1" placeholder="•" /></div>`;
-
-  // Inject props
-
-
   return (
     <div {...props} className="sudarshana-component-AnimatedOtp">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-otp-anim">
+        <input type="text" maxLength="1" placeholder="•" />
+        <input type="text" maxLength="1" placeholder="•" />
+        <input type="text" maxLength="1" placeholder="•" />
+        <input type="text" maxLength="1" placeholder="•" />
+      </div>
     </div>
   );
 };

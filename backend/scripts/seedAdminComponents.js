@@ -9,10 +9,10 @@ dotenv.config({ path: '.env' });
 
 const adminComponents = [
   {
-    name: "AdminChoice - Kinetic Marquee Button",
-    category: "Button",
-    markup: "\n<button class=\"sd-kinetic-mag-btn\">\n  <div class=\"sd-marquee-wrap\">\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n  </div>\n</button>\n",
-    styles: {
+    "name": "AdminChoice - Kinetic Marquee Button",
+    "category": "Button",
+    "markup": "\n<button class=\"sd-kinetic-mag-btn\">\n  <div class=\"sd-marquee-wrap\">\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n    <div class=\"sd-marquee-track\">\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n      <span>START PROJECT</span><img src=\"https://api.iconify.design/ph:arrow-right-bold.svg?color=white\" class=\"sd-icon\"/>\n    </div>\n  </div>\n</button>\n",
+    "styles": {
       ".sd-kinetic-mag-btn": {
         "position": "relative",
         "width": "240px",
@@ -73,10 +73,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Noise Glass Card",
-    category: "Card",
-    markup: "\n<div class=\"sd-grain-card\">\n  <div class=\"sd-grain-bg\"></div>\n  <div class=\"sd-grain-content\">\n    <div class=\"sd-badge\">NEW</div>\n    <h3>FROSTED</h3>\n    <p>Hyper-realistic Grain</p>\n  </div>\n</div>\n",
-    styles: {
+    "name": "AdminChoice - Noise Glass Card",
+    "category": "Card",
+    "markup": "\n<div class=\"sd-grain-card\">\n  <div class=\"sd-grain-bg\"></div>\n  <div class=\"sd-grain-content\">\n    <div class=\"sd-badge\">NEW</div>\n    <h3>FROSTED</h3>\n    <p>Hyper-realistic Grain</p>\n  </div>\n</div>\n",
+    "styles": {
       ".sd-grain-card": {
         "width": "280px",
         "height": "380px",
@@ -150,10 +150,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Magnetic Attraction Button",
-    category: "Button",
-    markup: "\n<button class=\"sd-magnet-core\">\n  <span class=\"sd-magnet-text\">MAGNETIC</span>\n  <div class=\"sd-magnet-field\"></div>\n  <div class=\"sd-magnet-ripple\"></div>\n</button>\n",
-    styles: {
+    "name": "AdminChoice - Magnetic Attraction Button",
+    "category": "Button",
+    "markup": "\n<button class=\"sd-magnet-core\">\n  <span class=\"sd-magnet-text\">MAGNETIC</span>\n  <div class=\"sd-magnet-field\"></div>\n  <div class=\"sd-magnet-ripple\"></div>\n</button>\n",
+    "styles": {
       ".sd-magnet-core": {
         "position": "relative",
         "padding": "25px 50px",
@@ -223,10 +223,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Reveal Mask Text",
-    category: "Text",
-    markup: "\n<h1 class=\"sd-masked-h1\" data-label=\"CREATIVE\">\n  CREATIVE\n</h1>\n",
-    styles: {
+    "name": "AdminChoice - Reveal Mask Text",
+    "category": "Text",
+    "markup": "\n<h1 class=\"sd-masked-h1\" data-label=\"CREATIVE\">\n  CREATIVE\n</h1>\n",
+    "styles": {
       ".sd-masked-h1": {
         "font-family": "impact, sans-serif",
         "font-size": "90px",
@@ -262,10 +262,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Liquid Morph Loader",
-    category: "Loader",
-    markup: "\n<div class=\"sd-gooey-wrap\">\n  <svg style=\"width:0;height:0;position:absolute;\"><filter id=\"goo-sharp\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\" result=\"blur\"/><feColorMatrix in=\"blur\" values=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9\" result=\"goo\"/><feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\"/></filter></svg>\n  <div class=\"sd-blobs\">\n    <div class=\"sd-blob-main\"></div>\n    <div class=\"sd-blob-orbit\"></div>\n  </div>\n</div>\n",
-    styles: {
+    "name": "AdminChoice - Liquid Morph Loader",
+    "category": "Loader",
+    "markup": "\n<div class=\"sd-gooey-wrap\">\n  <svg style=\"width:0;height:0;position:absolute;\"><filter id=\"goo-sharp\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\" result=\"blur\"/><feColorMatrix in=\"blur\" values=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9\" result=\"goo\"/><feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\"/></filter></svg>\n  <div class=\"sd-blobs\">\n    <div class=\"sd-blob-main\"></div>\n    <div class=\"sd-blob-orbit\"></div>\n  </div>\n</div>\n",
+    "styles": {
       ".sd-gooey-wrap": {
         "width": "100px",
         "height": "100px",
@@ -322,10 +322,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Creative Grid Menu",
-    category: "Menu",
-    markup: "\n<nav class=\"sd-brut-nav\">\n  <a href=\"#\" class=\"sd-brut-link\"><span>01</span> WORK</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>02</span> STUDIO</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>03</span> CONTACT</a>\n</nav>\n",
-    styles: {
+    "name": "AdminChoice - Creative Grid Menu",
+    "category": "Menu",
+    "markup": "\n<nav class=\"sd-brut-nav\">\n  <a href=\"#\" class=\"sd-brut-link\"><span>01</span> WORK</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>02</span> STUDIO</a>\n  <a href=\"#\" class=\"sd-brut-link\"><span>03</span> CONTACT</a>\n</nav>\n",
+    "styles": {
       ".sd-brut-nav": {
         "display": "flex",
         "flex-direction": "column",
@@ -382,10 +382,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Parallax Image Link",
-    category: "Link",
-    markup: "\n<a href=\"#\" class=\"sd-hover-img-link\" data-label=\"VIEW CASE\">\n  <span class=\"sd-link-text\">ARCHITECTURE</span>\n  <div class=\"sd-img-float\" style=\"background-image: url('https://picsum.photos/300/200?grayscale')\"></div>\n</a>\n",
-    styles: {
+    "name": "AdminChoice - Parallax Image Link",
+    "category": "Link",
+    "markup": "\n<a href=\"#\" class=\"sd-hover-img-link\" data-label=\"VIEW CASE\">\n  <span class=\"sd-link-text\">ARCHITECTURE</span>\n  <div class=\"sd-img-float\" style=\"background-image: url('https://picsum.photos/300/200?grayscale')\"></div>\n</a>\n",
+    "styles": {
       ".sd-hover-img-link": {
         "position": "relative",
         "display": "inline-block",
@@ -429,10 +429,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Glitch Title",
-    category: "Text",
-    markup: "\n<h1 class=\"sd-rgb-text\" data-text=\"SYSTEM_FAILURE\">SYSTEM_FAILURE</h1>\n",
-    styles: {
+    "name": "AdminChoice - Glitch Title",
+    "category": "Text",
+    "markup": "\n<h1 class=\"sd-rgb-text\" data-text=\"SYSTEM_FAILURE\">SYSTEM_FAILURE</h1>\n",
+    "styles": {
       ".sd-rgb-text": {
         "font-family": "monospace",
         "font-weight": "bold",
@@ -506,10 +506,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Interactive Toggle",
-    category: "Toggle",
-    markup: "\n<label class=\"sd-pill-toggle\">\n  <input type=\"checkbox\">\n  <div class=\"sd-pill-track\">\n    <span class=\"sd-label-off\">OFF</span>\n    <span class=\"sd-label-on\">ON</span>\n  </div>\n  <div class=\"sd-pill-thumb\"></div>\n</label>\n",
-    styles: {
+    "name": "AdminChoice - Interactive Toggle",
+    "category": "Toggle",
+    "markup": "\n<label class=\"sd-pill-toggle\">\n  <input type=\"checkbox\">\n  <div class=\"sd-pill-track\">\n    <span class=\"sd-label-off\">OFF</span>\n    <span class=\"sd-label-on\">ON</span>\n  </div>\n  <div class=\"sd-pill-thumb\"></div>\n</label>\n",
+    "styles": {
       ".sd-pill-toggle": {
         "position": "relative",
         "width": "80px",
@@ -561,10 +561,10 @@ const adminComponents = [
     }
   },
   {
-    name: "AdminChoice - Spotlight Input",
-    category: "Input",
-    markup: "\n<div class=\"sd-halo-input\">\n  <input type=\"email\" placeholder=\"notify@me.com\">\n  <div class=\"sd-halo-border\"></div>\n  <div class=\"sd-halo-glow\"></div>\n</div>\n",
-    styles: {
+    "name": "AdminChoice - Spotlight Input",
+    "category": "Input",
+    "markup": "\n<div class=\"sd-halo-input\">\n  <input type=\"email\" placeholder=\"notify@me.com\">\n  <div class=\"sd-halo-border\"></div>\n  <div class=\"sd-halo-glow\"></div>\n</div>\n",
+    "styles": {
       ".sd-halo-input": {
         "position": "relative",
         "width": "300px",
@@ -625,6 +625,235 @@ const adminComponents = [
       }
     }
   }
+  ,
+  {
+    "name": "AdminChoice - Simple Footer",
+    "category": "Footer",
+    "markup": "\n<footer class=\"footer\">\n  <div class=\"col\">\n    <h4>Brand</h4>\n    <p>© 2024 All rights reserved.</p>\n  </div>\n  <div class=\"col\">\n    <h4>Links</h4>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </div>\n  <div class=\"col\">\n    <h4>Social</h4>\n    <a href=\"#\">Twitter</a>\n    <a href=\"#\">GitHub</a>\n  </div>\n</footer>\n",
+    "styles": {
+      ".footer": {
+        "display": "flex",
+        "justify-content": "space-around",
+        "padding": "40px 20px",
+        "background": "#f8f9fa",
+        "color": "#333",
+        "border-top": "1px solid #eee"
+      },
+      ".col": {
+        "display": "flex",
+        "flex-direction": "column",
+        "gap": "10px"
+      },
+      "h4": {
+        "margin": "0 0 10px 0"
+      },
+      "a": {
+        "text-decoration": "none",
+        "color": "#666"
+      },
+      "a:hover": {
+        "color": "#000"
+      }
+    }
+  }
+  },
+{
+  "name": "AdminChoice - Animated Input",
+    "category": "Input",
+      "markup": "\n<div class=\"sd-input-group\">\n  <input type=\"text\" class=\"sd-input-anim\" placeholder=\" \" />\n  <label class=\"sd-label-anim\">{{label}}</label>\n</div>\n        ",
+        "styles": {
+    ".sd-input-group": {
+      "position": "relative",
+        "margin-top": "20px"
+    },
+    ".sd-input-anim": {
+      "width": "100%",
+        "padding": "10px 0",
+          "border": "none",
+            "border-bottom": "2px solid #999",
+              "outline": "none",
+                "background": "transparent",
+                  "color": "#333",
+                    "transition": "border-color 0.3s"
+    },
+    ".sd-input-anim:focus": {
+      "border-color": "#6200ea"
+    },
+    ".sd-label-anim": {
+      "position": "absolute",
+        "top": "10px",
+          "left": "0",
+            "color": "#999",
+              "pointer-events": "none",
+                "transition": "0.3s ease all"
+    },
+    ".sd-input-anim:focus ~ .sd-label-anim, .sd-input-anim:not(:placeholder-shown) ~ .sd-label-anim": {
+      "top": "-20px",
+        "font-size": "12px",
+          "color": "#6200ea"
+    }
+  },
+  "defaultProps": {
+    "label": "Username"
+  }
+},
+{
+  "name": "AdminChoice - Hover Card",
+    "category": "Card",
+      "markup": "\n<div class=\"sd-card-anim\">\n  <div class=\"sd-img-placeholder\"></div>\n  <div class=\"sd-content\">\n    <h3>{{title}}</h3>\n    <p>{{content}}</p>\n  </div>\n</div>\n      ",
+        "styles": {
+    ".sd-card-anim": {
+      "border-radius": "12px",
+        "overflow": "hidden",
+          "max-width": "300px",
+            "background": "white",
+              "box-shadow": "0 4px 6px rgba(0,0,0,0.1)",
+                "transition": "transform 0.3s ease, box-shadow 0.3s ease",
+                  "cursor": "pointer",
+                    "color": "#333"
+    },
+    ".sd-card-anim:hover": {
+      "transform": "translateY(-10px)",
+        "box-shadow": "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)"
+    },
+    ".sd-img-placeholder": {
+      "height": "150px",
+        "background": "linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)"
+    },
+    ".sd-content": {
+      "padding": "20px"
+    },
+    "h3": {
+      "margin": "0 0 10px 0"
+    }
+  },
+  "defaultProps": {
+    "title": "Hover Card",
+      "content": "Hover over me to see the effect!"
+  }
+}
+  },
+{
+  "name": "AdminChoice - Animated Footer",
+    "category": "Footer",
+      "markup": "\n<footer class=\"sd-footer-anim\">\n  <div class=\"sd-wave\"></div>\n  <div class=\"sd-content\">\n    <div class=\"sd-socials\">\n      <a href=\"#\" class=\"sd-soc\">Tw</a>\n      <a href=\"#\" class=\"sd-soc\">In</a>\n      <a href=\"#\" class=\"sd-soc\">Fb</a>\n    </div>\n    <p>Designed with ❤️ by You</p>\n  </div>\n</footer>\n",
+        "styles": {
+    ".sd-footer-anim": {
+      "position": "relative",
+        "background": "#333",
+          "color": "white",
+            "padding": "50px 20px",
+              "text-align": "center",
+                "overflow": "hidden",
+                  "margin-top": "50px"
+    },
+    ".sd-content": {
+      "position": "relative",
+        "z-index": "2"
+    },
+    ".sd-socials": {
+      "display": "flex",
+        "justify-content": "center",
+          "gap": "20px",
+            "margin-bottom": "20px"
+    },
+    ".sd-soc": {
+      "width": "40px",
+        "height": "40px",
+          "border-radius": "50%",
+            "background": "rgba(255,255,255,0.1)",
+              "display": "flex",
+                "align-items": "center",
+                  "justify-content": "center",
+                    "color": "white",
+                      "text-decoration": "none",
+                        "transition": "transform 0.3s, background 0.3s"
+    },
+    ".sd-soc:hover": {
+      "transform": "translateY(-5px) rotate(10deg)",
+        "background": "#6200ea"
+    },
+    ".sd-wave": {
+      "position": "absolute",
+        "top": "-50px",
+          "left": "0",
+            "width": "100%",
+              "height": "100px",
+                "background": "white",
+                  "border-radius": "0 0 50% 50% / 0 0 100% 100%",
+                    "transform": "scaleX(1.5)"
+    }
+  }
+},
+{
+  "name": "AdminChoice - OTP Input",
+    "category": "Input",
+      "markup": "<div class=\"sd-otp-anim\"><input type=\"text\" maxlength=\"1\" placeholder=\"•\" class=\"sd-otp-input-anim\" /><input type=\"text\" maxlength=\"1\" placeholder=\"•\" class=\"sd-otp-input-anim\" /><input type=\"text\" maxlength=\"1\" placeholder=\"•\" class=\"sd-otp-input-anim\" /><input type=\"text\" maxlength=\"1\" placeholder=\"•\" class=\"sd-otp-input-anim\" /></div>",
+        "styles": {
+    ".sd-otp-anim": {
+      "display": "flex",
+        "gap": "12px"
+    },
+    ".sd-otp-input-anim": {
+      "width": "50px",
+        "height": "60px",
+          "text-align": "center",
+            "font-size": "24px",
+              "background": "#f0f0f0",
+                "border": "2px solid transparent",
+                  "border-radius": "12px",
+                    "outline": "none",
+                      "transition": "all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+                        "color": "#333"
+    },
+    ".sd-otp-input-anim:focus": {
+      "transform": "translateY(-5px) scale(1.1)",
+        "border-color": "#6200ea",
+          "background": "white",
+            "box-shadow": "0 10px 20px rgba(98, 0, 234, 0.2)"
+    },
+    "@keyframes sd-shake": {
+      "0%, 100%": {
+        "transform": "translateX(0)"
+      },
+      "20%, 60%": {
+        "transform": "translateX(-5px)"
+      },
+      "40%, 80%": {
+        "transform": "translateX(5px)"
+      }
+    }
+  }
+},
+{
+  "name": "AdminChoice - Gradient Button",
+    "category": "Button",
+      "markup": "<button class=\"sd-btn-anim\">{{label}}</button>",
+        "styles": {
+    ".sd-btn-anim": {
+      "padding": "12px 24px",
+        "background": "linear-gradient(25deg, #EF8B4A 50%, #FF6E64 40%)",
+          "color": "white",
+            "border": "none",
+              "border-radius": "25px",
+                "cursor": "wait",
+                  "font-size": "16px",
+                    "transition": "transform 0.2s, box-shadow 0.2s",
+                      "box-shadow": "0 3px 5px 2px rgba(255, 105, 135, .3)"
+    },
+    ".sd-btn-anim:hover": {
+      "transform": "scale(1.05)",
+        "box-shadow": "0 3px 15px 2px rgba(255, 105, 135, .5)"
+    },
+    ".sd-btn-anim:active": {
+      "transform": "scale(0.95)"
+    }
+  },
+  "defaultProps": {
+    "label": "yo yes"
+  }
+}
+}
 ];
 
 const run = async () => {
@@ -651,7 +880,7 @@ const run = async () => {
     if (!admin) {
       console.log("Admin not found. Creating default admin...");
       admin = await User.create({
-        name: "dhruv1",
+        "name": "dhruv1",
         email: "dhruv@admin.com",
         password: "$2b$10$9AB//SEwc1esqtCAMRLVNeKfFh9PF3IFX9qZcxgbdhOLpjkpaHtmG",
         role: "admin",
@@ -687,12 +916,12 @@ const run = async () => {
       let isNew = false;
 
       if (comp) {
-        console.log(`  -> Updating existing: ${item.name}`);
+        console.log(`  -> Updating existing: ${item.name} `);
         comp.definition = definition;
         // We DO NOT reset version or status here, preserving history.
         await comp.save();
       } else {
-        console.log(`  -> Creating new: ${item.name}`);
+        console.log(`  -> Creating new: ${item.name} `);
         isNew = true;
         comp = await Component.create({
           name: item.name,

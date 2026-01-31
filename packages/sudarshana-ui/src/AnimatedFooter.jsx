@@ -16,27 +16,20 @@ const styles = `
 `;
 
 export const AnimatedFooter = (props) => {
-  let html = `
-<footer class="sd-footer-anim">
-  <div class="sd-wave"></div>
-  <div class="sd-content">
-    <div class="sd-socials">
-      <a href="#" class="sd-soc">Tw</a>
-      <a href="#" class="sd-soc">In</a>
-      <a href="#" class="sd-soc">Fb</a>
-    </div>
-    <p>Designed with ❤️ by You</p>
-  </div>
-</footer>
-`;
-
-  // Inject props
-
-
   return (
     <div {...props} className="sudarshana-component-AnimatedFooter">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <footer className="sd-footer-anim">
+        <div className="sd-wave"></div>
+        <div className="sd-content">
+          <div className="sd-socials">
+            <a href="#" className="sd-soc">Tw</a>
+            <a href="#" className="sd-soc">In</a>
+            <a href="#" className="sd-soc">Fb</a>
+          </div>
+          <p>Designed with ❤️ by You</p>
+        </div>
+      </footer>
     </div>
   );
 };

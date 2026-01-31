@@ -15,20 +15,13 @@ const styles = `
 `;
 
 export const AnimatedTextfield = ({ label = "Username", ...rest }) => {
-  let html = `
-<div class="sd-input-group">
-  <input type="text" class="sd-input-anim" placeholder=" " />
-  <label class="sd-label-anim">{{label}}</label>
-</div>
-        `;
-
-  // Inject props
-  html = html.replaceAll('{{label}}', label);
-
   return (
-    <div {...rest} className="sudarshana-component-AnimatedTextfield">
+    <div className="sudarshana-component-AnimatedTextfield">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-input-group">
+        <input type="text" className="sd-input-anim" placeholder=" " {...rest} />
+        <label className="sd-label-anim">{label}</label>
+      </div>
     </div>
   );
 };

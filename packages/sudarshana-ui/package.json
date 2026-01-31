@@ -1,6 +1,6 @@
 {
     "name": "@sudarshanaui/ui",
-    "version": "1.0.2",
+    "version": "2.0.3",
     "description": "A collection of modern, animated React components.",
     "main": "index.js",
     "publishConfig": {
@@ -15,8 +15,7 @@
         "ui",
         "animation"
     ],
-    "author": "Sudarshana Team",
-    "license": "MIT",
+    "author": "dhruv adroja",
     "homepage": "https://sudarshanaui.vercel.app",
     "dependencies": {},
     "peerDependencies": {

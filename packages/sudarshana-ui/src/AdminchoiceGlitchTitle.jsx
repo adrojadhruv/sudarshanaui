@@ -18,18 +18,13 @@ const styles = `
 
 `;
 
-export const AdminchoiceGlitchTitle = (props) => {
-  let html = `
-<h1 class="sd-rgb-text" data-text="SYSTEM_FAILURE">SYSTEM_FAILURE</h1>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceGlitchTitle = ({ label = "SYSTEM_FAILURE", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceGlitchTitle">
+    <div {...rest} className="sudarshana-component-AdminchoiceGlitchTitle">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <h1 className="sd-rgb-text" data-text={label}>
+        {label}
+      </h1>
     </div>
   );
 };

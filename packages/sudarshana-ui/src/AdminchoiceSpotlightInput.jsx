@@ -18,22 +18,20 @@ const styles = `
 
 `;
 
-export const AdminchoiceSpotlightInput = (props) => {
-  let html = `
-<div class="sd-halo-input">
-  <input type="email" placeholder="notify@me.com">
-  <div class="sd-halo-border"></div>
-  <div class="sd-halo-glow"></div>
-</div>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceSpotlightInput = ({ value, onChange, placeholder = "notify@me.com", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceSpotlightInput">
+    <div {...rest} className="sudarshana-component-AdminchoiceSpotlightInput">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-halo-input">
+        <input
+          type="email"
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+        <div className="sd-halo-border"></div>
+        <div className="sd-halo-glow"></div>
+      </div>
     </div>
   );
 };

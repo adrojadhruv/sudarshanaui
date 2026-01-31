@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@sudarshanaui/ui": "^1.0.1",
+    "@sudarshanaui/adminchoice---reveal-mask-text": "^2.0.0",
+    "@sudarshanaui/animated-card": "^2.0.0",
+    "@sudarshanaui/fancy-button": "^2.0.0",
+    "@sudarshanaui/ui": "^2.0.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

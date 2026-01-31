@@ -19,25 +19,18 @@ const styles = `
 
 `;
 
-export const AdminchoiceNoiseGlassCard = (props) => {
-  let html = `
-<div class="sd-grain-card">
-  <div class="sd-grain-bg"></div>
-  <div class="sd-grain-content">
-    <div class="sd-badge">NEW</div>
-    <h3>FROSTED</h3>
-    <p>Hyper-realistic Grain</p>
-  </div>
-</div>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceNoiseGlassCard = ({ title = "FROSTED", subtitle = "Hyper-realistic Grain", badge = "NEW", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceNoiseGlassCard">
+    <div {...rest} className="sudarshana-component-AdminchoiceNoiseGlassCard">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-grain-card">
+        <div className="sd-grain-bg"></div>
+        <div className="sd-grain-content">
+          <div className="sd-badge">{badge}</div>
+          <h3>{title}</h3>
+          <p>{subtitle}</p>
+        </div>
+      </div>
     </div>
   );
 };

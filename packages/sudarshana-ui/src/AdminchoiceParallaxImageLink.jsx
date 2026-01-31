@@ -15,21 +15,14 @@ const styles = `
 
 `;
 
-export const AdminchoiceParallaxImageLink = (props) => {
-  let html = `
-<a href="#" class="sd-hover-img-link" data-label="VIEW CASE">
-  <span class="sd-link-text">ARCHITECTURE</span>
-  <div class="sd-img-float" style="background-image: url('https://picsum.photos/300/200?grayscale')"></div>
-</a>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceParallaxImageLink = ({ label = "ARCHITECTURE", image = "https://picsum.photos/300/200?grayscale", href = "#", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceParallaxImageLink">
+    <div {...rest} className="sudarshana-component-AdminchoiceParallaxImageLink">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <a href={href} className="sd-hover-img-link" data-label={label}>
+        <span className="sd-link-text">{label}</span>
+        <div className="sd-img-float" style={{ backgroundImage: `url('${image}')` }}></div>
+      </a>
     </div>
   );
 };

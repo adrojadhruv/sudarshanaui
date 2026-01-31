@@ -15,33 +15,26 @@ const styles = `
 `;
 
 export const NormalFooter = (props) => {
-  let html = `
-<footer class="sd-footer">
-  <div class="sd-col">
-    <h4>Brand</h4>
-    <p>© 2024 All rights reserved.</p>
-  </div>
-  <div class="sd-col">
-    <h4>Links</h4>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-  <div class="sd-col">
-    <h4>Social</h4>
-    <a href="#">Twitter</a>
-    <a href="#">GitHub</a>
-  </div>
-</footer>
-`;
-
-  // Inject props
-
-
   return (
     <div {...props} className="sudarshana-component-NormalFooter">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <footer className="sd-footer">
+        <div className="sd-col">
+          <h4>Brand</h4>
+          <p>© 2024 All rights reserved.</p>
+        </div>
+        <div className="sd-col">
+          <h4>Links</h4>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div className="sd-col">
+          <h4>Social</h4>
+          <a href="#">Twitter</a>
+          <a href="#">GitHub</a>
+        </div>
+      </footer>
     </div>
   );
 };

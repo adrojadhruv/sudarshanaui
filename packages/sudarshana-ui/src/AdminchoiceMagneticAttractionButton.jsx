@@ -18,22 +18,15 @@ const styles = `
 
 `;
 
-export const AdminchoiceMagneticAttractionButton = (props) => {
-  let html = `
-<button class="sd-magnet-core">
-  <span class="sd-magnet-text">MAGNETIC</span>
-  <div class="sd-magnet-field"></div>
-  <div class="sd-magnet-ripple"></div>
-</button>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceMagneticAttractionButton = ({ label = "MAGNETIC", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceMagneticAttractionButton">
+    <div {...rest} className="sudarshana-component-AdminchoiceMagneticAttractionButton">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <button className="sd-magnet-core">
+        <span className="sd-magnet-text">{label}</span>
+        <div className="sd-magnet-field"></div>
+        <div className="sd-magnet-ripple"></div>
+      </button>
     </div>
   );
 };

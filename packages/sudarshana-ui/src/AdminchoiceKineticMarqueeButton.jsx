@@ -18,31 +18,21 @@ const styles = `
 
 `;
 
-export const AdminchoiceKineticMarqueeButton = (props) => {
-  let html = `
-<button class="sd-kinetic-mag-btn">
-  <div class="sd-marquee-wrap">
-    <div class="sd-marquee-track">
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-    </div>
-    <div class="sd-marquee-track">
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-      <span>START PROJECT</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" class="sd-icon"/>
-    </div>
-  </div>
-</button>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceKineticMarqueeButton = ({ label = "START PROJECT", ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceKineticMarqueeButton">
+    <div {...rest} className="sudarshana-component-AdminchoiceKineticMarqueeButton">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <button className="sd-kinetic-mag-btn">
+        <div className="sd-marquee-wrap">
+          {[1, 2].map((i) => (
+            <div key={i} className="sd-marquee-track">
+              <span>{label}</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" className="sd-icon" alt="" />
+              <span>{label}</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" className="sd-icon" alt="" />
+              <span>{label}</span><img src="https://api.iconify.design/ph:arrow-right-bold.svg?color=white" className="sd-icon" alt="" />
+            </div>
+          ))}
+        </div>
+      </button>
     </div>
   );
 };

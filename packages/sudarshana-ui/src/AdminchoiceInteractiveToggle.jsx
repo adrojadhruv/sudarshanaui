@@ -17,25 +17,22 @@ const styles = `
 
 `;
 
-export const AdminchoiceInteractiveToggle = (props) => {
-  let html = `
-<label class="sd-pill-toggle">
-  <input type="checkbox">
-  <div class="sd-pill-track">
-    <span class="sd-label-off">OFF</span>
-    <span class="sd-label-on">ON</span>
-  </div>
-  <div class="sd-pill-thumb"></div>
-</label>
-`;
-
-  // Inject props
-
-
+export const AdminchoiceInteractiveToggle = ({ checked, onChange, ...rest }) => {
   return (
-    <div {...props} className="sudarshana-component-AdminchoiceInteractiveToggle">
+    <div {...rest} className="sudarshana-component-AdminchoiceInteractiveToggle">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <label className="sd-pill-toggle">
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={onChange}
+        />
+        <div className="sd-pill-track">
+          <span className="sd-label-off">OFF</span>
+          <span className="sd-label-on">ON</span>
+        </div>
+        <div className="sd-pill-thumb"></div>
+      </label>
     </div>
   );
 };

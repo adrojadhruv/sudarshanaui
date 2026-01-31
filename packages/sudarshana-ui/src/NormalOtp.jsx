@@ -12,15 +12,15 @@ const styles = `
 `;
 
 export const NormalOtp = (props) => {
-  let html = `<div class="sd-otp-group"><input type="text" maxlength="1" /><input type="text" maxlength="1" /><input type="text" maxlength="1" /><input type="text" maxlength="1" /></div>`;
-
-  // Inject props
-
-
   return (
     <div {...props} className="sudarshana-component-NormalOtp">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-otp-group">
+        <input type="text" maxLength="1" />
+        <input type="text" maxLength="1" />
+        <input type="text" maxLength="1" />
+        <input type="text" maxLength="1" />
+      </div>
     </div>
   );
 };

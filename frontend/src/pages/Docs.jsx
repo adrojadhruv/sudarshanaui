@@ -24,6 +24,8 @@ export default function Docs() {
         { id: 'overview', title: 'System Overview' },
         { id: 'roles', title: 'Roles & Permissions' },
         { id: 'consumption', title: 'Consumption Strategies' },
+        { id: 'use-explained', title: 'Use Explained' },
+        { id: 'updating', title: 'Updating Components' },
         { id: 'studio', title: 'Code Editor' },
         { id: 'collaboration', title: 'Collaboration' },
     ];
@@ -197,6 +199,141 @@ export default function Docs() {
                             </div>
                         </Section>
 
+                        {/* USE EXPLAINED */}
+                        <Section id="use-explained" isLast={false}>
+                            <Header title="Use Explained" isDark={isDark} />
+                            <Paragraph isDark={isDark}>
+                                Regardless of how you install them, all components are built to be <strong>interactive</strong> and <strong>customizable</strong>.
+                                Here is how to use them in different scenarios.
+                            </Paragraph>
+
+                            <div style={{ display: 'grid', gap: '60px', marginTop: '40px' }}>
+
+                                {/* 1. MONOLITH */}
+                                <div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                                        <span style={{ background: '#6366f1', color: '#fff', fontSize: '0.8rem', fontWeight: 'bold', padding: '4px 10px', borderRadius: '4px' }}>Recommended</span>
+                                        <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', margin: 0, color: isDark ? '#fff' : '#000' }}>
+                                            Scenario A: Full Library (Monolith)
+                                        </h3>
+                                    </div>
+                                    <Paragraph isDark={isDark}>
+                                        Import what you need from the main package. Perfect for most applications.
+                                    </Paragraph>
+                                    <CodeBlock code={`import { AdminchoiceRevealMaskText } from '@sudarshanaui/ui';
+
+export default function App() {
+  return (
+    <AdminchoiceRevealMaskText 
+      label="DESIGN SYSTEM" 
+      style={{ marginTop: '20px' }} // Simple inline style
+    />
+  );
+}`} isDark={isDark} />
+                                </div>
+
+                                {/* 2. STANDALONE */}
+                                <div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                                        <span style={{ border: `1px solid ${isDark ? '#555' : '#ccc'}`, color: isDark ? '#ccc' : '#555', fontSize: '0.8rem', fontWeight: 'bold', padding: '4px 10px', borderRadius: '4px' }}>Modular</span>
+                                        <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', margin: 0, color: isDark ? '#fff' : '#000' }}>
+                                            Scenario B: Standalone Packages
+                                        </h3>
+                                    </div>
+                                    <Paragraph isDark={isDark}>
+                                        If you installed a specific package (e.g., via <code>npm i @sudarshanaui/fancy-button</code>), functionality is identical.
+                                    </Paragraph>
+                                    <CodeBlock code={`import { FancyButton } from '@sudarshanaui/fancy-button';
+
+// Usage is identical to the main library
+<FancyButton onClick={() => alert('Clicked!')} />`} isDark={isDark} />
+                                </div>
+
+                                {/* 3. DOWNLOADED */}
+                                <div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                                        <span style={{ background: isDark ? '#333' : '#eee', color: isDark ? '#fff' : '#000', fontSize: '0.8rem', fontWeight: 'bold', padding: '4px 10px', borderRadius: '4px' }}>Manual</span>
+                                        <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', margin: 0, color: isDark ? '#fff' : '#000' }}>
+                                            Scenario C: Downloaded Source
+                                        </h3>
+                                    </div>
+                                    <Paragraph isDark={isDark}>
+                                        When "ejecting" or downloading components, you own the file. Import it relatively.
+                                    </Paragraph>
+                                    <CodeBlock code={`import FancyButton from './components/FancyButton';
+
+<FancyButton label="Click Me" />`} isDark={isDark} />
+                                </div>
+
+                                {/* CSS OVERRIDES */}
+                                <div style={{ padding: '30px', background: isDark ? 'rgba(99, 102, 241, 0.1)' : '#EFF0FF', borderRadius: '12px', border: `1px solid ${isDark ? 'rgba(99, 102, 241, 0.2)' : '#E0E7FF'}` }}>
+                                    <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', margin: '0 0 16px 0', color: isDark ? '#fff' : '#000' }}>
+                                        Advanced: CSS Overrides
+                                    </h3>
+                                    <Paragraph isDark={isDark}>
+                                        Components use stable class names prefixed with <code>sd-</code>. You can override these in your global CSS to customize the look without ejecting.
+                                    </Paragraph>
+                                    <CodeBlock code={`/* Your App.css */
+.sd-masked-h1 {
+  /* Use !important to override default styles */
+  color: #00ffff !important;
+  font-family: 'Courier New', monospace !important;
+}`} isDark={isDark} />
+                                </div>
+
+                            </div>
+                        </Section>
+
+                        {/* UPDATING COMPONENTS */}
+                        <Section id="updating" isLast={false}>
+                            <Header title="Updating Components" isDark={isDark} />
+                            <Paragraph isDark={isDark}>
+                                Keeping your UI in sync with the latest designs and fixes depends on your chosen consumption method.
+                            </Paragraph>
+
+                            <div style={{ display: 'grid', gap: '32px', marginTop: '30px' }}>
+
+                                {/* NPM STRATEGY */}
+                                <div style={{ padding: '24px', border: border, borderRadius: '12px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                        <div style={{ padding: '8px', background: isDark ? '#27272a' : '#f4f4f5', borderRadius: '6px' }}><Icons.Package /></div>
+                                        <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600', color: isDark ? '#fff' : '#000' }}>Method A & C: Managed Updates</h3>
+                                    </div>
+                                    <Paragraph isDark={isDark}>
+                                        Since these are managed dependencies, you can simply use your package manager to pull the latest version.
+                                    </Paragraph>
+                                    <CodeBlock code="npm update @sudarshanaui/ui" isDark={isDark} />
+                                </div>
+
+                                {/* MANUAL STRATEGY */}
+                                <div style={{ padding: '24px', border: border, borderRadius: '12px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                        <div style={{ padding: '8px', background: isDark ? '#27272a' : '#f4f4f5', borderRadius: '6px' }}><Icons.Download /></div>
+                                        <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600', color: isDark ? '#fff' : '#000' }}>Method B: Manual Updates</h3>
+                                    </div>
+                                    <Paragraph isDark={isDark}>
+                                        Because you own the source code, <strong>there is no automatic update stream</strong>. You must manually pull the new version.
+                                    </Paragraph>
+
+                                    <div style={{ marginTop: '24px', paddingLeft: '16px', borderLeft: `2px solid ${isDark ? '#27272a' : '#e4e4e7'}` }}>
+                                        <Step n="1" title="Re-Download" desc="Go to the component page and click 'Download' to get the latest ZIP." isDark={isDark} />
+                                        <Step n="2" title="Replace" desc="Manually replace the component folder in your project." isDark={isDark} />
+                                    </div>
+
+                                    <div style={{ marginTop: '20px', padding: '16px', background: isDark ? 'rgba(239, 68, 68, 0.1)' : '#fef2f2', border: '1px solid rgba(239, 68, 68, 0.2)', borderRadius: '8px', display: 'flex', gap: '12px' }}>
+                                        <div style={{ color: '#ef4444' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg></div>
+                                        <div>
+                                            <div style={{ fontWeight: '600', color: isDark ? '#fecaca' : '#991b1b', fontSize: '0.9rem' }}>Warning: Breaking Changes</div>
+                                            <div style={{ fontSize: '0.85rem', color: isDark ? '#d4d4d8' : '#7f1d1d', marginTop: '4px', lineHeight: '1.5' }}>
+                                                Replacing the file will <strong>overwrite any custom changes</strong> you have made to the logic or styles. Always back up your code before updating.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </Section>
+
                         {/* STUDIO */}
                         <Section id="studio" isLast={false}>
                             <Header title="Code Editor" isDark={isDark} />
@@ -278,12 +415,71 @@ const RoleRow = ({ icon: Icon, title, type, perm, desc, bg, isDark }) => (
     </div>
 );
 
-const CodeBlock = ({ code, isDark }) => (
-    <div style={{ padding: '16px', background: '#09090b', borderRadius: '6px', border: '1px solid #27272a', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <code style={{ fontFamily: 'monospace', color: '#fff' }}>{code}</code>
-        <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e' }} />
-    </div>
-);
+const CodeBlock = ({ code, isDark }) => {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(code);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    return (
+        <div style={{
+            marginTop: '16px',
+            borderRadius: '8px',
+            border: isDark ? '1px solid #333' : '1px solid #e4e4e7',
+            background: isDark ? '#0d0d0d' : '#18181b',
+            overflow: 'hidden',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+        }}>
+            {/* Header */}
+            <div style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '12px 16px', borderBottom: '1px solid #333',
+                background: '#27272a'
+            }}>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ff5f56' }} />
+                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ffbd2e' }} />
+                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#27c93f' }} />
+                </div>
+
+                <div style={{ fontSize: '0.75rem', color: '#a1a1aa', fontFamily: 'monospace' }}>
+                    bash / jsx
+                </div>
+
+                <button
+                    onClick={handleCopy}
+                    style={{
+                        background: 'transparent', border: 'none', cursor: 'pointer',
+                        color: copied ? '#4ade80' : '#a1a1aa',
+                        fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '6px',
+                        padding: '4px 8px', borderRadius: '4px',
+                        transition: 'all 0.2s ease'
+                    }}
+                >
+                    {copied ? (
+                        <>
+                            <Icons.Check /> <span>Copied!</span>
+                        </>
+                    ) : (
+                        <>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </>
+                    )}
+                </button>
+            </div>
+            {/* Content */}
+            <div style={{ padding: '24px', overflowX: 'auto' }}>
+                <pre style={{ margin: 0, fontFamily: "'JetBrains Mono', 'Fira Code', 'Consolas', monospace", fontSize: '0.9rem', color: '#e5e5e5', lineHeight: '1.6', whiteSpace: 'pre-wrap' }}>
+                    {code}
+                </pre>
+            </div>
+        </div>
+    );
+};
 
 const FeatureCard = ({ title, sub, children, border, isDark }) => (
     <div style={{ padding: '24px', border: border, borderRadius: '8px' }}>

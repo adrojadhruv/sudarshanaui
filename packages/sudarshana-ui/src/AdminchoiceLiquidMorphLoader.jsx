@@ -18,23 +18,22 @@ const styles = `
 `;
 
 export const AdminchoiceLiquidMorphLoader = (props) => {
-  let html = `
-<div class="sd-gooey-wrap">
-  <svg style="width:0;height:0;position:absolute;"><filter id="goo-sharp"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/><feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo"/><feComposite in="SourceGraphic" in2="goo" operator="atop"/></filter></svg>
-  <div class="sd-blobs">
-    <div class="sd-blob-main"></div>
-    <div class="sd-blob-orbit"></div>
-  </div>
-</div>
-`;
-
-  // Inject props
-
-
   return (
     <div {...props} className="sudarshana-component-AdminchoiceLiquidMorphLoader">
       <style>{styles}</style>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="sd-gooey-wrap">
+        <svg style={{ width: 0, height: 0, position: 'absolute' }}>
+          <filter id="goo-sharp">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </svg>
+        <div className="sd-blobs">
+          <div className="sd-blob-main"></div>
+          <div className="sd-blob-orbit"></div>
+        </div>
+      </div>
     </div>
   );
 };
