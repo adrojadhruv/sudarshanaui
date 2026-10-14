@@ -33,7 +33,7 @@ Experience how users can contribute to the library:
 
 ---
 
-## 🛡️ Role-Based Access Control (RBAC) Checklist
+##  Role-Based Access Control (RBAC) Checklist
 
 -   [ ] **Guest**: Can only view the Public Gallery. Cannot see "Create New" or "Requests".
 -   [ ] **Basic User**: Can View Details but cannot Edit or Create.
