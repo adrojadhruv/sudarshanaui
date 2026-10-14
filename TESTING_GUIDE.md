@@ -1,8 +1,8 @@
-# 🧪 Sudarshana UI - Visitor Guide
+#  Sudarshana UI - Visitor Guide
 
 Welcome! Use these demo accounts to explore the platform's features.
 
-## 👤 Demo Accounts
+##  Demo Accounts
 
 | Role | Email | Password | Capabilities |
 | :--- | :--- | :--- | :--- |
@@ -11,7 +11,7 @@ Welcome! Use these demo accounts to explore the platform's features.
 
 ---
 
-## 🔄 Try the Collaboration Workflow
+##  Try the Collaboration Workflow
 
 Experience how users can contribute to the library:
 
