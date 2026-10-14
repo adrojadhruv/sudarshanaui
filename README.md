@@ -1,10 +1,11 @@
-<img width="1280" height="496" alt="image" src="https://github.com/user-attachments/assets/f1ba0d54-6ef3-4d60-9f13-da2f0443799f" /># Sudarshana UI 🌟
+<img width="1280" height="472" alt="image" src="https://github.com/user-attachments/assets/7b8e74bf-95c2-4230-8025-8e1ea7f1e9d2" />
+
+
+   # Sudarshana UI 🌟
 
 > **The Golden Standard for React Components.**
 > An advanced, collaborative component library built with the MERN stack.
 
-![Sudarshana UI](<img width="1280" height="496" alt="image" src="https://github.com/user-attachments/assets/4215a76a-3887-4d29-aa11-d5f392a3c423" />
-) *Add a screenshot here!*
 
 ## Overview
 
@@ -24,7 +25,7 @@ Sudarshana UI is not just a component library; it's a **collaborative platform**
     *   One-click "Download Package" to export components as `npm` ready packages.
 *   ** Explore & Search:** Infinite marquee categories and real-time search filtering.
 
-##  Contributors
+##  Contributor
 
 *   **Dhruv Adroja** 
 
